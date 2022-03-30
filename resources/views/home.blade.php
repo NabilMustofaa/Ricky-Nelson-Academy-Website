@@ -1,4 +1,4 @@
 @extends('layouts.main')
-@section('body')
+@section('content')
     <h1>HALAMAN BERANDA</h1>
 @endsection

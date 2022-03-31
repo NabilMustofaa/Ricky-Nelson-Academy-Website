@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\BasicController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\User;
+use App\Models\statistik;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,18 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home',[
-//         'title'=> 'Beranda'
-//     ]);
-// });
+Route::get('/', [BasicController::class,'home']);
 
-// Route::get('/login', function () {
-//     return view('login',[
-//         'title'=> 'Login'
-//     ]);
-// });
+Route::get('/login',[BasicController::class,'login'] );
 
-Route::view('/','home',['title'=> 'Beranda']);
-Route::view('/login','login',['title'=> 'Login']);
+Route::get('/dashboard',[DashboardController::class, 'index']);
 

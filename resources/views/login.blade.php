@@ -11,7 +11,7 @@
 <body>
     <nav >
         <div class="nav-container">
-            <a class="nav-text" href="#">Beranda</a>
+            <a class="nav-text" href="/">Beranda</a>
             <a class="nav-text" href="#">About Us</a>
             <a class="nav-text" href="#">Jadwal</a>
             <a class="nav-text" href="#">Artikel</a>
@@ -21,5 +21,18 @@
     <div class="content">
         <h1>Halaman Login</h1>
     </div>
+
+    <form action="action_page.php" method="post">
+        <div class="login-container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          {{-- <button type="submit">Login</button> --}}
+          <a class="button" href="/dashboard">Login</a>
+        </div>
+      </form>
 </body>
 </html>

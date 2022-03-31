@@ -2,23 +2,88 @@ nav{
     margin: 0;
     width: 100vw;
     background-color: black;
+    height: 8vh;
 }
 .nav-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 0 0 50vw;
-    padding: 2vh 2vw 2vh 0;
+    margin: 0 0 0 60vw;
+    padding: 3vh 2vw 2vh 0;
 }
+
 .nav-text{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
     color: white;
 }
+.nav-text:hover{
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+
 body{
     margin: 0;
 }
-h1{
+h1,h3{
     text-align: center;
+}
+p{
+    text-align: center;
+    margin: 5vh 20vw 5vh 20vw;
+}
+ 
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+.button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    width: 10vw;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+  
+  
+.button:hover {
+    opacity: 0.8;
+}
+
+
+.login-container {
+    padding: 16px;
+    margin: 10vh 30vw 0 30vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.table{
+    display: grid;
+    grid-auto-rows: auto;
+    margin: 5vh 25vw 5vh 25vw;
+}
+.row-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+.table-headers{
+    border: 1px solid black;
+    background-color: blue;
+}
+.table-content{
+    border: 1px solid black;
+    
 }

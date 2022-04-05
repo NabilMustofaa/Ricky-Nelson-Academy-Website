@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
-use App\Models\statistik;
+use App\Models\Statistik;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -10,8 +10,8 @@ class DashboardController extends Controller
     public function index(){
         return view('dashboard',[
             'title'=> 'Login',
-            'user' => user::info(),
-            'statistik' => statistik::stat()
+            'user' => User::find(1),
+            'statistik' => Statistik::all()
         ]);
     }
 

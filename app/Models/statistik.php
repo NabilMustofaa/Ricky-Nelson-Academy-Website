@@ -1,26 +1,15 @@
 <?php
+
 namespace App\Models;
 
-class statistik
-{
-    private static $statistik=[
-        [
-            'tanggal' => '31/03/2002',
-            'status'  => 'hadir' 
-        ],
-        [
-            'tanggal' => '21/03/2002',
-            'status'  => 'hadir' 
-        ],
-        [
-            'tanggal' => '11/03/2002',
-            'status'  => 'hadir' 
-        ]
-        
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
+class Statistik extends Model
+{
+    use HasFactory;
+    protected $fillable = [
+        'nama_jadwal',
+        'tanggal',
     ];
-    public static function stat(){
-        return self::$statistik;
-    }
 }
-?>

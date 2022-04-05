@@ -22,7 +22,10 @@ nav{
     color: blue;
     border-bottom: 2px solid blue;
 }
-
+img{
+    display: block;
+    margin: 0 auto 0 auto;
+}
 body{
     margin: 0;
 }

@@ -1,0 +1,26 @@
+const { create } = require("lodash")
+
+user::create([
+    'name'=>'nabil',
+    'email'=>'nabil@gmail.com',
+    'password'=> bcrypt('nabil')
+])
+
+peserta::create([
+    'posisi'=>"left wing",
+    'levelpemain'=> 'pemula',
+    'user_id'=>1
+])
+
+jadwal::create([
+    'namaJadwal'=>"Tanding minggu 2",
+    'typeJadwal'=> 'Latihan',
+    'levelJadwal'=>'Pemula',
+    'tanggalWaktu'=>"2022-03-22 19:00"
+])
+
+statistik::create([
+    'peserta_id'=>'1',
+    'jadwal_id'=>'3',
+    'status'=>true
+])

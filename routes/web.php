@@ -20,5 +20,10 @@ Route::get('/', [BasicController::class,'home']);
 
 Route::get('/login',[BasicController::class,'login'] );
 
+Route::get('/jadwal',[BasicController::class, 'jadwal']);
+Route::get('/jadwal/{typeJadwal}',[BasicController::class, 'selectJadwal']);
+
 Route::get('/dashboard',[DashboardController::class, 'index']);
+
+
 

@@ -1,10 +1,8 @@
-
-
 @extends('layouts.main')
 @section('content')
-    <h1>HALAMAN Dashboard</h1>
-    <img src="{{ asset('img/nabil.jpg') }}" alt="" width="200px">
-    <h3>{{ $peserta->User->name }} /{{ $peserta->posisi }}</h3>
+    <h1>Halaman Dashboard</h1>
+    <img src="{{ asset('img/nabil.jpg') }}" alt="" width="150px" style="margin: 5vh auto 5vh auto">
+    <h3 >{{ $peserta->User->name }} /{{ $peserta->posisi }}</h3>
     <div class="table">
         <div class="row-container">
             <div class="table-headers">nama Jadwal</div>
@@ -12,7 +10,7 @@
             <div class="table-headers">status</div>
         </div>
     
-        @foreach ($peserta->Statistik as $item)
+        @foreach ($statistik as $item)
         <div class="row-container">
             <div class="table-content">{{ $item->Jadwal->namaJadwal }}</div>
             <div class="table-content">{{ $item->Jadwal->tanggalWaktu }}</div>
@@ -22,7 +20,7 @@
             @else
             {{ 'hadir' }}
             @endif 
-        </div>
+            </div>
         </div>
         @endforeach
 </div>

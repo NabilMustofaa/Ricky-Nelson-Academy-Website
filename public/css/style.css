@@ -22,12 +22,6 @@ nav{
 .nav-text:hover{
     border-bottom: 2px solid white;
 }
-img{
-    display: block;
-    margin: 0 auto 0 auto;
-    border-radius: 10px;
-    border: 1px solid #1B1717;
-}
 body{
     margin: 0;
 }
@@ -40,8 +34,6 @@ h1,h3,h4,a{
 
 p{
     font-family: 'Montserrat';
-    text-align: center;
-    margin: 5vh 20vw 5vh 20vw;
 }
  
 
@@ -90,15 +82,26 @@ input[type=text], input[type=password] {
     display: flex;
     flex-direction: column;
 }
+.bdr{
+    overflow: hidden;
+}
+.blur{
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+.webkit{
+    -webkit-appearance: menulist-button;
+   -moz-appearance: menulist-button;
+    appearance: menulist-button !important;
+}
 
 
-.table{
+/* .table{
     display: grid;
     grid-auto-rows: auto;
-    margin: 5vh 25vw 5vh 25vw;
     background-color: #D54C4C;
     border-radius: 5px;
-}
+} */
 .row-container{
     display: grid;
     grid-template-columns: 40% 30% 30%;

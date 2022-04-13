@@ -23,7 +23,10 @@ Route::get('/login',[BasicController::class,'login'] );
 Route::get('/jadwal',[BasicController::class, 'jadwal']);
 Route::get('/jadwal/{typeJadwal}',[BasicController::class, 'selectJadwal']);
 
-Route::get('/dashboard',[DashboardController::class, 'index']);
+Route::get('/dashboard',[DashboardController::class, 'dashboard']);
+Route::get('/dashboard/jadwal',[DashboardController::class, 'jadwal']);
+Route::get('/dashboard/artikel',[DashboardController::class, 'artikel']);
+Route::get('/dashboard/jadwal/add',[DashboardController::class, 'formJadwal']);
 
 
 

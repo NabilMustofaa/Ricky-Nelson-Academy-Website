@@ -9,12 +9,31 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index(){
+    public function dashboard(){
         $peserta = Peserta::find(1);
         return view('dashboard',[
-            'title'=> 'Login',
+            'title'=> 'Dashboard',
             'peserta' => $peserta,
             'statistik'=> $peserta->statistik
+        ]);
+    }
+    public function jadwal(){
+        $peserta = Peserta::find(1);
+        return view('dashboardJadwal',[
+            'title'=> 'Jadwal',
+        ]);
+    }
+    public function artikel(){
+        $peserta = Peserta::find(1);
+        return view('dashboardArtikel',[
+            'title'=> 'Artikel',
+        ]);
+    }
+
+    public function formJadwal(){
+        $peserta = Peserta::find(1);
+        return view('formJadwal',[
+            'title'=> 'Jadwal',
         ]);
     }
 }

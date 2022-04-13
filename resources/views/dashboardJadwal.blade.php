@@ -5,7 +5,7 @@
     <div class="container-fluid d-flex flex-column m-0 ">
         <p class="h2 ms-4 mt-3">Jadwal</p>
         <div class="d-flex mx-4 mt-3 justify-content-between">
-            <a class="btn btn-success d-flex">Buat Jadwal</a>
+            <a href= "jadwal/add"class="btn btn-success d-flex">Buat Jadwal</a>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>

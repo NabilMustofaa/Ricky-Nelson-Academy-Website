@@ -3,11 +3,11 @@
 @section('content')
 @include('partials.sidebar')
 
-    <div class="container-fluid d-flex flex-column m-0 ">
+    <div class="container-fluid d-flex flex-column mside ">
         <p class="h2 ms-4 mt-3">Dashboard</p>
-        <div class="container d-flex flex-column m-0 ">
-            <div class="blur"></div>
-            <div class="container d-flex flex-row m-0">
+        
+        <div class="d-flex flex-column m-0 ">
+            <div class="d-flex flex-row m-0">
                 <div class="card text-center m-2 p-5 d-flex flex-col align-items-center bg-white bg-opacity-50" style="width: 25%;">
                     <img src="{{ asset('img/nabil.jpg') }}" class="rounded float-start mx-auto d-block" width="200px">
                     <button type="button" class="btn btn-success mt-4">Edit Profile</button>

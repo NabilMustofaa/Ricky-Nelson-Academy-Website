@@ -75,7 +75,10 @@ input[type=text], input[type=password] {
     margin: 5vh auto 5vh auto;
     justify-content: center;
 }
-
+.content{
+    display: flex;
+    flex-direction: row;
+}
 .login-container {
     padding: 16px;
     margin: 10vh 30vw 0 30vw;

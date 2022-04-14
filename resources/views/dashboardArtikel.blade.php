@@ -2,17 +2,17 @@
 
 @section('content')
 @include('partials.sidebar')
-    <div class="container-fluid d-flex flex-column m-0 ">
+    <div class="container-fluid d-flex flex-column mside ">
         <p class="h2 ms-4 mt-3">Artikel</p>
-        <div class="d-flex mx-4 mt-3 justify-content-between">
-            <a class="btn btn-success d-flex">Buat Artikel</a>
+        <div class="d-flex mt-3 justify-content-between">
+            <a href="artikel/add" class="btn btn-success d-flex">Buat Artikel</a>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>
         </div>
         
-        <table class="table table-secondary table-hover w-auto mt-2 mx-4 border rounded overflow-hidden">
+        <table class="table table-secondary table-hover w-auto mt-2 border rounded overflow-hidden">
             <thead>
               <tr>
                 <th scope="col">Tanggal Rilis</th>

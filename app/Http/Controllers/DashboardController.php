@@ -36,4 +36,11 @@ class DashboardController extends Controller
             'title'=> 'Jadwal',
         ]);
     }
+
+    public function formArtikel(){
+        $peserta = Peserta::find(1);
+        return view('formArtikel',[
+            'title'=> 'Artikel',
+        ]);
+    }
 }

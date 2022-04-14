@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 @include('partials.sidebar')
-<div class="container-fluid d-flex flex-column m-0 ">
+<div class="container-fluid d-flex flex-column mside">
     <p class="h2 ms-4 mt-3">Buat Jadwal</p>
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
@@ -9,22 +9,22 @@
     </ol>
     <form>
         <div class="form-group">
-            <label for="namaJadwal">Nama Jadwal</label>
+            <label class="h6" for="namaJadwal">Nama Jadwal</label>
             <input type="text" class="form-control" id="namaJadwal" placeholder="">
         </div>
         <div class="row justify-content-between">
         <div class="form-group col-md-6">
-            <label for="inputState">Pilih tanggal</label>
+            <label class="h6" for="inputState">Pilih tanggal</label>
             <input placeholder="Select date" type="date" id="example" class="form-control">
         </div>
         <div class="form-group col-md-6">
-            <label for="inputState">Pilih waktu</label>
+            <label class="h6" for="inputState">Pilih waktu</label>
             <input placeholder="Select date" type="time" id="example" class="form-control">
         </div>
         </div>
         <div class="row justify-content-between">
             <div class="form-group col-md-6">
-                <label for="inputState">Tingkat</label>
+                <label class="h6" for="inputState">Tingkat</label>
                 <select id="inputState" class="form-control custom-select">
                   <option>Pemula</option>
                   <option>Menengah</option>
@@ -32,14 +32,14 @@
                 </select>
         </div>
             <div class="form-group col-md-6">
-                <label for="exampleFormControlSelect1">Type</label>
+                <label class="h6" for="exampleFormControlSelect1">Type</label>
                 <select class="form-control custom-select" id="exampleFormControlSelect1">
                   <option>Latihan</option>
                   <option>Tanding</option>
             </select>
             </div>
-
         </div>
+        <button class="btn btn-success" type="submit">Submit form</button>
     </form>
 </div>
 @endsection

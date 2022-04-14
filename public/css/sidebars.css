@@ -4,6 +4,12 @@ body {
   min-height: -webkit-fill-available;
 }
 
+hr{
+  border-top: solid 1px white !important;
+  width: 15vw;
+
+}
+
 html {
   height: -webkit-fill-available;
 }
@@ -88,3 +94,8 @@ main {
 
 .fw-semibold { font-weight: 600; }
 .lh-tight { line-height: 1.25; }
+
+.mside{
+  margin-left: 19vw !important;
+  margin-right: 2vw !important;
+}

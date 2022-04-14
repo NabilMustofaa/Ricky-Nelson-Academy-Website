@@ -2,9 +2,9 @@
 
 @section('content')
 @include('partials.sidebar')
-    <div class="container-fluid d-flex flex-column m-0 ">
+    <div class="container-fluid d-flex flex-column mside ">
         <p class="h2 ms-4 mt-3">Jadwal</p>
-        <div class="d-flex mx-4 mt-3 justify-content-between">
+        <div class="d-flex me-4 mt-3 justify-content-between">
             <a href= "jadwal/add"class="btn btn-success d-flex">Buat Jadwal</a>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -12,7 +12,7 @@
               </form>
         </div>
         
-        <table class="table table-secondary table-hover w-auto mt-2 mx-4 border rounded overflow-hidden">
+        <table class="table table-secondary table-hover w-auto mt-2 border rounded overflow-hidden">
             <thead>
               <tr>
                 <th scope="col">Tanggal</th>

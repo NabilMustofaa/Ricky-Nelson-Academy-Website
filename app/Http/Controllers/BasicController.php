@@ -13,6 +13,18 @@ class BasicController extends Controller
         ]);
     }
 
+    public function about() {
+        return view('about',[
+            'title'=> 'About Us'
+        ]);
+    }
+
+    public function artikel() {
+        return view('artikel',[
+            'title'=> 'Artikel'
+        ]);
+    }
+
     public function login() {
         return view('login',[
             'title'=> 'Login'

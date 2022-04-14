@@ -1,28 +1,35 @@
 @extends('layouts.main')
+@include('partials.nav')
 @section('content')
+<section class="container py-5">
 
-<h1 style="margin: 5vh"> Jadwal Academy</h1>
-<div class="select-container">
-    <h4>Select by:</h4>
-    <a href ="/jadwal" class="button-white">Semua</a>
-    <a href ="/jadwal/Latihan" class="button-white">Latihan</a>
-    <a href ="/jadwal/Tanding" class="button-white">Tanding</a>
-</div>
-
-<div class="table">
-    <div class="row-container">
-        <div class="table-headers">Nama Jadwal</div>
-        <div class="table-headers">Tanggal</div>
-        <div class="table-headers">Level</div>
+    <h1 class="text-center"> Jadwal Academy</h1>
+    <div class="select-container mb-2">
+        <h4>Select by:</h4>
+        <a href ="/jadwal" class="btn btn-success">Semua</a>
+        <a href ="/jadwal/Latihan" class="btn btn-success">Latihan</a>
+        <a href ="/jadwal/Tanding" class="btn btn-success">Tanding</a>
     </div>
 
-    @foreach ($jadwal as $item)
-    <div class="row-container">
-        <div class="table-content">{{ $item->namaJadwal }}</div>
-        <div class="table-content">{{ $item->tanggalWaktu }}</div>
-        <div class="table-content">{{ $item->levelJadwal }} </div>
-    </div>  
-    @endforeach
-      
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nama Jadwal</th>
+                <th>Tanggal</th>
+                <th>Level</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach ($jadwal as $item)
+            <tr>
+                <td>{{ $item->namaJadwal }}</td>
+                <td>{{ $item->tanggalWaktu }}</td>
+                <td>{{ $item->levelJadwal }} </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</section>
 
 @endsection

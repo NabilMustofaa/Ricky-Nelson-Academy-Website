@@ -34,7 +34,7 @@
         {{ 'text-white' }}
         @endif ">
         <i class="bi bi-sticky mx-3"></i>
-          <p class="m-0" style="justify-self: center">Artkel</p>
+          <p class="m-0" style="justify-self: center">Artikel</p>
         </a>
       </li>
     </ul>

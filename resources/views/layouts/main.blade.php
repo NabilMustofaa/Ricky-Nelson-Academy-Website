@@ -44,22 +44,10 @@
             </div>
 
             <div class="box">
-                <h3>Links</h3>
-                <a href="#home">home</a>
-                <a href="#protect">protect</a>
-                <a href="#symtoms">symtoms</a>
-                <a href="#prevent">prevent</a>
-                <a href="#handwash">handwash</a>
-                <a href="#spread">spread</a>
-                <a href="indexYA.html">reservation</a>
-                <a href="#">hospital</a>
-            </div>
-
-            <div class="box">
                 <h3>Kontak Informasi</h3>
-                <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
-                <p> <i class="fas fa-envelope"></i> Swab-in@gmail.com </p>
-                <p> <i class="fas fa-map-marker-alt"></i> Jatim, Surabaya - 60116 </p>
+                <p> <i class="fas fa-phone"></i> +62-8123-6905-920 </p>
+                <p> <i class="fas fa-envelope"></i> rickynelson@gmail.com </p>
+                <p> <i class="fas fa-map-marker-alt"></i> Jatim, Mojokerto </p>
                 <div class="share">
                     <a href="#" class="fab fa-facebook-f"></a>
                     <a href="#" class="fab fa-twitter"></a>
@@ -69,7 +57,7 @@
 
         </div>
 
-        <h1 class="credit"> created by <a href="https://www.linkedin.com/in/rakyankrisna/" target="_blank"> 100temankalian </a> all rights reserved! </h1>
+        <h1 class="credit"> Created by <a href="https://www.linkedin.com/in/rakyankrisna/" target="_blank"> 100temankalian </a> all rights reserved! </h1>
 
     </section>
     <script src="{{ asset('assets/js/jquery-1.11.0.min.js') }}"></script>

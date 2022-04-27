@@ -28,7 +28,7 @@
                 <td>Pemula</td>
                 <td>
                     <div>
-                        <a href="" class="btn btn-warning">Edit</a>
+                        <a href="/dashboard/jadwal/edit" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </div>
                 </td>
@@ -39,7 +39,7 @@
                 <td>Pemula</td>
                 <td>
                     <div>
-                        <a href="" class="btn btn-warning">Edit</a>
+                      <a href="/dashboard/jadwal/edit" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </div>
                 </td>
@@ -50,7 +50,7 @@
                 <td>Pemula</td>
                 <td>
                     <div>
-                        <a href="" class="btn btn-warning">Edit</a>
+                      <a href="/dashboard/jadwal/edit" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </div>
                 </td>

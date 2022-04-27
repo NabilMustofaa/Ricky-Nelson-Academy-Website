@@ -39,10 +39,23 @@ class DashboardController extends Controller
         ]);
     }
 
+    public function editJadwal(){
+        $peserta = Peserta::find(1);
+        return view('editJadwal',[
+            'title'=> 'Jadwal',
+        ]);
+    }
+
     public function formArtikel(){
         $peserta = Peserta::find(1);
         return view('formArtikel',[
             'title'=> 'Artikel',
+        ]);
+    }
+    public function editArtikel(){
+        $peserta = Peserta::find(1);
+        return view('editArtikel',[
+            'title'=> 'Jadwal',
         ]);
     }
 }

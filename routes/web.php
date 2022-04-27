@@ -29,6 +29,8 @@ Route::get('/dashboard',[DashboardController::class, 'dashboard']);
 Route::get('/dashboard/jadwal',[DashboardController::class, 'jadwal']);
 Route::get('/dashboard/artikel',[DashboardController::class, 'artikel']);
 Route::get('/dashboard/artikel/add',[DashboardController::class, 'formArtikel']);
+Route::get('/dashboard/artikel/edit',[DashboardController::class, 'editArtikel']);
+Route::get('/dashboard/jadwal/edit',[DashboardController::class, 'editJadwal']);
 Route::get('/dashboard/jadwal/add',[DashboardController::class, 'formJadwal']);
 
 

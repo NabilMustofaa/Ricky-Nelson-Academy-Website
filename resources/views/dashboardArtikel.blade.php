@@ -29,7 +29,7 @@
                 <td>
                     <div>
                         <a href="" class="btn btn-secondary">View</a>
-                        <a href="" class="btn btn-warning">Edit</a>
+                        <a href="/dashboard/artikel/edit" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </div>
                 </td>
@@ -41,7 +41,7 @@
                 <td>
                     <div>
                         <a href="" class="btn btn-secondary">View</a>
-                        <a href="" class="btn btn-warning">Edit</a>
+                        <a href="/dashboard/artikel/edit" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </div>
                 </td>
@@ -53,7 +53,7 @@
                 <td>
                     <div>
                         <a href="" class="btn btn-secondary">View</a>
-                        <a href="" class="btn btn-warning">Edit</a>
+                        <a href="/dashboard/artikel/edit" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </div>
                 </td>
@@ -65,7 +65,7 @@
                 <td>
                     <div>
                         <a href="" class="btn btn-secondary">View</a>
-                        <a href="" class="btn btn-warning">Edit</a>
+                        <a href="/dashboard/artikel/edit" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </div>
                 </td>
@@ -77,7 +77,7 @@
                 <td>
                     <div>
                         <a href="" class="btn btn-secondary">View</a>
-                        <a href="" class="btn btn-warning">Edit</a>
+                        <a href="/dashboard/artikel/edit" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </div>
                 </td>

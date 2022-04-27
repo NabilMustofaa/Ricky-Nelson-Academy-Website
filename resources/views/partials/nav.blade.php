@@ -23,22 +23,22 @@
             <div class="flex-fill">
                 <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Beranda</a>
+                        <a class="nav-link" href="/" style="color: white">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">About Us</a>
+                        <a class="nav-link" href="/about" style="color: white">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/jadwal">Jadwal</a>
+                        <a class="nav-link" href="/jadwal" style="color: white">Jadwal</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/artikel">Artikel</a>
+                        <a class="nav-link" href="/artikel" style="color: white">Artikel</a>
                     </li>
                 </ul>
             </div>
             <div class="navbar align-self-center d-flex">
-                <a class="nav-icon position-relative text-decoration-none" href="/login">
-                    <i class="fa fa-fw fa-user text-dark mr-1"></i>
+                <a class="nav-icon position-relative text-decoration-none" href="/login" style="color: white">
+                    <i class="fa fa-fw fa-user text-light mr-1" ></i>
                     Login
                 </a>
             </div>

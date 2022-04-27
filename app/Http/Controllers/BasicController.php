@@ -38,7 +38,7 @@ class BasicController extends Controller
         ]);
     }
 
-    public function selectJadwal (string $type) {
+    public function selectJadwal (int $type) {
         return view('jadwal',[
             'title'=> 'Jadwal',
             'jadwal'=> Jadwal::where('typeJadwal',$type)->get()

@@ -18,10 +18,60 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
     @yield('content')
+    <section class="footer">
 
+        <div class="box-container">
+
+            <div class="box">
+                <h3>Tentang Kami</h3>
+                <p>Swab-in Merupakan Website Untuk Melakukan Test COVID-19 Secara Mandiri. Hubungi Kami Guna Info Lebih
+                    Lanjut.</p>
+            </div>
+
+            <div class="box">
+                <h3>Lokasi</h3>
+                <a href="#">Surabaya</a>
+                <a href="#">Jakarta</a>
+                <a href="#">Semarang</a>
+                <a href="#">Bandung</a>
+                <a href="#">Solo</a>
+                <a href="#">Banten</a>
+                <a href="#">Sidoarjo</a>
+            </div>
+
+            <div class="box">
+                <h3>Links</h3>
+                <a href="#home">home</a>
+                <a href="#protect">protect</a>
+                <a href="#symtoms">symtoms</a>
+                <a href="#prevent">prevent</a>
+                <a href="#handwash">handwash</a>
+                <a href="#spread">spread</a>
+                <a href="indexYA.html">reservation</a>
+                <a href="#">hospital</a>
+            </div>
+
+            <div class="box">
+                <h3>Kontak Informasi</h3>
+                <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+                <p> <i class="fas fa-envelope"></i> Swab-in@gmail.com </p>
+                <p> <i class="fas fa-map-marker-alt"></i> Jatim, Surabaya - 60116 </p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <h1 class="credit"> created by <a href="https://www.linkedin.com/in/rakyankrisna/" target="_blank"> 100temankalian </a> all rights reserved! </h1>
+
+    </section>
     <script src="{{ asset('assets/js/jquery-1.11.0.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery-migrate-1.2.1.min.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>

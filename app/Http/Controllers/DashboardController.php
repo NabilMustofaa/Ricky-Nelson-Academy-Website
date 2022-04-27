@@ -14,15 +14,17 @@ class DashboardController extends Controller
         return view('dashboard',[
             'title'=> 'Dashboard',
             'peserta' => $peserta,
-            'statistik'=> $peserta->statistik
+            'statistik'=> $peserta -> statistik
         ]);
     }
+
     public function jadwal(){
         $peserta = Peserta::find(1);
         return view('dashboardJadwal',[
             'title'=> 'Jadwal',
         ]);
     }
+    
     public function artikel(){
         $peserta = Peserta::find(1);
         return view('dashboardArtikel',[

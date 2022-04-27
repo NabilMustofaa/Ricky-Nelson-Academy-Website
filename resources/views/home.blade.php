@@ -87,13 +87,13 @@
             <p class="text-center"><a class="btn btn-success">View Profile</a></p>
         </div>
         <div class="col-12 col-md-4 p-5 mt-3">
-            <a href="#"><img src="./assets/img/nabil.png" class="rounded-circle img-fluid border"></a>
-            <h2 class="h5 text-center mt-3 mb-3">Nabil Mustofa</h2>
+            <a href="#"><img src="./assets/img/rickynelson.png" class="rounded-circle img-fluid border"></a>
+            <h2 class="h5 text-center mt-3 mb-3">Ricky Nelson</h2>
             <p class="text-center"><a class="btn btn-success">View Profile</a></p>
         </div>
         <div class="col-12 col-md-4 p-5 mt-3">
-            <a href="#"><img src="./assets/img/rickynelson.jpg" class="rounded-circle img-fluid border"></a>
-            <h2 class="h5 text-center mt-3 mb-3">Ricky Nelson</h2>
+            <a href="#"><img src="./assets/img/nabil.png" class="rounded-circle img-fluid border"></a>
+            <h2 class="h5 text-center mt-3 mb-3">Nabil Mustofa</h2>
             <p class="text-center"><a class="btn btn-success">View Profile</a></p>
         </div>
     </div>

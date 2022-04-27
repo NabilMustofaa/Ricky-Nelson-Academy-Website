@@ -27,31 +27,11 @@
         <div class="box-container">
 
             <div class="box">
-                <h3>Tentang Kami</h3>
-                <p>Swab-in Merupakan Website Untuk Melakukan Test COVID-19 Secara Mandiri. Hubungi Kami Guna Info Lebih
-                    Lanjut.</p>
-            </div>
-
-            <div class="box">
-                <h3>Lokasi</h3>
-                <a href="#">Surabaya</a>
-                <a href="#">Jakarta</a>
-                <a href="#">Semarang</a>
-                <a href="#">Bandung</a>
-                <a href="#">Solo</a>
-                <a href="#">Banten</a>
-                <a href="#">Sidoarjo</a>
-            </div>
-
-            <div class="box">
-                <h3>Kontak Informasi</h3>
-                <p> <i class="fas fa-phone"></i> +62-8123-6905-920 </p>
-                <p> <i class="fas fa-envelope"></i> rickynelson@gmail.com </p>
-                <p> <i class="fas fa-map-marker-alt"></i> Jatim, Mojokerto </p>
+                <h3>OUR SOCIAL MEDIA</h3>
                 <div class="share">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="https://www.facebook.com/Ricky-Nelson-Academy-589447584854154/" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://www.youtube.com/channel/UCLE40J2I-TmcH4xCjT9hYUQ" target="_blank" class="fab fa-youtube"></a>
+                    <a href="https://www.instagram.com/rickynelsonacademy/?hl=en" target="_blank" class="fab fa-instagram"></a>
                 </div>
             </div>
 
@@ -65,5 +45,6 @@
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/templatemo.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="https://kit.fontawesome.com/e3c5fb8671.js" crossorigin="anonymous"></script>
 </body>
 </html>

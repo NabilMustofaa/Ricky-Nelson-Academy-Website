@@ -80,7 +80,7 @@
 
 <section class="container py-5">
     <div class="row text-center">
-        <h2>Meet our team !</h2>
+        <h2>MEET OUR TEAM !</h2>
         <div class="col-12 col-md-4 p-5 mt-3">
             <a href="#"><img src="./assets/img/rakyan.png" class="rounded-circle img-fluid border"></a>
             <h5 class="text-center mt-3 mb-3">Rakyan Krisna</h5>
@@ -100,20 +100,17 @@
 </section>
 <!-- Modal gallery -->
 <section class="container text-center">
-    <h2>Gallery</h2>
+    <h2>GALLERY</h2>
     <!-- Section: Images -->
     <section class="">
-        @for ($i=0;$i<3;$i++)
+        <!-- Baris 1 -->
         <div class="row mb-4 mt-4">
             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
               <div
                 class="bg-image hover-overlay ripple shadow-1-strong rounded"
                 data-ripple-color="light"
               >
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/screens/yt/screen-video-1.webp"
-                  class="w-100"
-                />
+              <img class="img-fluid" src="./assets/img/rna_juvenilea.jpg" alt="">
                 <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                 </a>
@@ -125,10 +122,7 @@
                 class="bg-image hover-overlay ripple shadow-1-strong rounded"
                 data-ripple-color="light"
               >
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/screens/yt/screen-video-2.webp"
-                  class="w-100"
-                />
+              <img class="img-fluid" src="./assets/img/rna_train1.jpg" alt="">
                 <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                 </a>
@@ -140,18 +134,89 @@
                 class="bg-image hover-overlay ripple shadow-1-strong rounded"
                 data-ripple-color="light"
               >
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/screens/yt/screen-video-3.webp"
-                  class="w-100"
-                />
+              <img class="img-fluid" src="./assets/img/rna_juvenileb.jpg" alt="">
                 <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                 </a>
               </div>
             </div>
           </div>
-        @endfor
-      
+        <!-- Baris 2 -->
+        <div class="row mb-4 mt-4">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+            <img class="img-fluid" src="./assets/img/rna_train2.jpg" alt="">
+              <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+            <img class="img-fluid" src="./assets/img/rna_squadlist.jpg" alt="">
+              <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+            <img class="img-fluid" src="./assets/img/rna_train3.jpg" alt="">
+              <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- baris 3 -->
+        <div class="row mb-4 mt-4">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+            <img class="img-fluid" src="./assets/img/rna_juvenilec.jpg" alt="">
+              <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+            <img class="img-fluid" src="./assets/img/rna_train4.jpg" alt="">
+              <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+            >
+            <img class="img-fluid" src="./assets/img/rna_juveniled.jpg" alt="">
+              <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal3">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
+          </div>
+        </div>
     </section>
     <!-- Section: Images -->
   </section>

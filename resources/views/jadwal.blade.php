@@ -4,11 +4,11 @@
 <section class="container py-5">
 
     <h1 class="text-center"> Jadwal Academy</h1>
-    <div class="select-container mb-2">
-        <h4>Select by:</h4>
-        <a href ="/jadwal" class="btn btn-success">Semua</a>
-        <a href ="/jadwal/Latihan" class="btn btn-success">Latihan</a>
-        <a href ="/jadwal/Tanding" class="btn btn-success">Tanding</a>
+    <h2 class="text-center mt-5">Select By</h2>
+    <div class="select-container mt-0 mb-2">
+        <a href ="/jadwal" class="btn btn-success me-2">Semua</a>
+        <a href ="/jadwal/Latihan" class="btn btn-success me-2">Latihan</a>
+        <a href ="/jadwal/Tanding" class="btn btn-success me-2">Tanding</a>
     </div>
 
     <table class="table">

@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\BasicController;
+use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardJadwalController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use App\Models\statistik;
@@ -26,12 +28,11 @@ Route::get('/jadwal',[BasicController::class, 'jadwal']);
 Route::get('/jadwal/{typeJadwal}',[BasicController::class, 'selectJadwal']);
 
 Route::get('/dashboard',[DashboardController::class, 'dashboard']);
-Route::get('/dashboard/jadwal',[DashboardController::class, 'jadwal']);
-Route::get('/dashboard/artikel',[DashboardController::class, 'artikel']);
-Route::get('/dashboard/artikel/add',[DashboardController::class, 'formArtikel']);
-Route::get('/dashboard/artikel/edit',[DashboardController::class, 'editArtikel']);
-Route::get('/dashboard/jadwal/edit',[DashboardController::class, 'editJadwal']);
-Route::get('/dashboard/jadwal/add',[DashboardController::class, 'formJadwal']);
+
+
+Route::resource('/dashboard/artikel',DashboardArtikelController::class);
+
+Route::resource('/dashboard/jadwal',DashboardJadwalController::class);
 
 
 

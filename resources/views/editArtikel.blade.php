@@ -26,7 +26,7 @@
         
         <div class="form-group">
             <label class="h6" for="namaJadwal">Judul Artikel</label>
-            <input type="text" class="form-control" id="namaJadwal" placeholder="" value="Kemenangan Berturut">
+            <input type="text" class="form-control" id="namaJadwal" placeholder="" value="{{ $artikel->judul_artikel }}">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>

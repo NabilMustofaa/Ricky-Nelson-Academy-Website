@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Jadwal;
+use App\Models\Artikel;
 use Illuminate\Http\Request;
 
 class BasicController extends Controller
@@ -21,7 +22,9 @@ class BasicController extends Controller
 
     public function artikel() {
         return view('artikel',[
-            'title'=> 'Artikel'
+            'title'=> 'Artikel',
+            'artikel'=>Artikel::all(),
+
         ]);
     }
 

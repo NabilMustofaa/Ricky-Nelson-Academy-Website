@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('kategori_id');
             $table->string('slug');
             $table->string('judul_artikel');
-            $table->text('highligt_artikel');
+            $table->text('highlight_artikel');
             $table->text('isi_artikel');
             $table->timestamps();
         });

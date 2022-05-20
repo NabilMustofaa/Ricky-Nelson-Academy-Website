@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('namaJadwal');
             $table->string('typeJadwal');
             $table->string('levelJadwal');
-            $table->dateTime('tanggalWaktu');
+            $table->date('tanggalJadwal');
+            $table->Time('waktuJadwal');
             $table->timestamps();
         });
     }

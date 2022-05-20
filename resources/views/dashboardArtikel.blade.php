@@ -22,66 +22,22 @@
               </tr>
             </thead>
             <tbody>
+              @foreach ($artikels as $artikel)
               <tr>
-                <td>2022-03-05</td>
+                <td>{{ $artikel->created_at }}</td>
                 <td>Nabil Mustofa</td>
-                <td>Kemenangan Berturut</td>
+                <td>{{ $artikel->judul_artikel }}</td>
                 <td>
                     <div>
                         <a href="" class="btn btn-secondary">View</a>
-                        <a href="/dashboard/artikel/edit" class="btn btn-warning">Edit</a>
+                        <a href="/dashboard/artikel/edit/{{ $artikel->id }}" class="btn btn-warning">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </div>
                 </td>
               </tr>
-              <tr>
-                <td>2022-03-05</td>
-                <td>Nabil Mustofa</td>
-                <td>Kemenangan Berturut</td>
-                <td>
-                    <div>
-                        <a href="" class="btn btn-secondary">View</a>
-                        <a href="/dashboard/artikel/edit" class="btn btn-warning">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td>2022-03-05</td>
-                <td>Nabil Mustofa</td>
-                <td>Kemenangan Berturut</td>
-                <td>
-                    <div>
-                        <a href="" class="btn btn-secondary">View</a>
-                        <a href="/dashboard/artikel/edit" class="btn btn-warning">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td>2022-03-05</td>
-                <td>Nabil Mustofa</td>
-                <td>Kemenangan Berturut</td>
-                <td>
-                    <div>
-                        <a href="" class="btn btn-secondary">View</a>
-                        <a href="/dashboard/artikel/edit" class="btn btn-warning">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td>2022-03-05</td>
-                <td>Nabil Mustofa</td>
-                <td>Kemenangan Berturut</td>
-                <td>
-                    <div>
-                        <a href="" class="btn btn-secondary">View</a>
-                        <a href="/dashboard/artikel/edit" class="btn btn-warning">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
-                    </div>
-                </td>
-              </tr>
+              @endforeach
+              
+              
             </tbody>
           </table>
           <ul class="pagination mx-auto">

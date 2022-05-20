@@ -5,13 +5,19 @@
     <div class="container-fluid d-flex flex-column mside ">
         <p class="h2 ms-4 mt-3">Jadwal</p>
         <div class="d-flex me-4 mt-3 justify-content-between">
-            <a href= "jadwal/add"class="btn btn-success d-flex">Buat Jadwal</a>
+            <a href= "jadwal/create"class="btn btn-success d-flex">Buat Jadwal</a>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>
         </div>
         
+      @if (session()->has('success'))
+      <div class="alert alert-success mt-2" role="alert">
+          {{ session('success') }}
+      </div>
+      @endif
+      
         <table class="table table-secondary table-hover w-auto mt-2 border rounded overflow-hidden">
             <thead>
               <tr>
@@ -22,39 +28,26 @@
               </tr>
             </thead>
             <tbody>
+              @foreach ( $jadwal as $item)
               <tr>
-                <td>2022-03-01</td>
-                <td>Latihan Rutin 1</td>
-                <td>Pemula</td>
+                <td>{{ $item->tanggalJadwal }}/{{ $item->waktuJadwal }}</td>
+                <td>{{ $item->namaJadwal }}</td>
+                <td>{{ $item->levelJadwal }}</td>
                 <td>
                     <div>
-                        <a href="/dashboard/jadwal/edit" class="btn btn-warning">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
+                        <a href="/dashboard/jadwal/{{ $item->id }}/edit" class="btn btn-warning">Edit</a>
+                        <form action="/dashboard/jadwal/{{ $item->id }}" method="post" class="d-inline">
+                          @method('delete')
+                          @csrf
+                          <button class="btn btn-danger" onclick="return confirm('Hapus data ?')">Delete</button>
+                        </form>
+                        
                     </div>
                 </td>
               </tr>
-              <tr>
-                <td>2022-03-05</td>
-                <td>Latihan Rutin 2</td>
-                <td>Pemula</td>
-                <td>
-                    <div>
-                      <a href="/dashboard/jadwal/edit" class="btn btn-warning">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td>2022-03-06</td>
-                <td>Latihan Tanding 1</td>
-                <td>Pemula</td>
-                <td>
-                    <div>
-                      <a href="/dashboard/jadwal/edit" class="btn btn-warning">Edit</a>
-                        <a href="" class="btn btn-danger">Delete</a>
-                    </div>
-                </td>
-              </tr>
+              @endforeach
+             
+              
             </tbody>
           </table>
           <ul class="pagination mx-auto">

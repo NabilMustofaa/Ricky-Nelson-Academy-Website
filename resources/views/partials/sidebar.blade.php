@@ -5,34 +5,22 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="/dashboard" class="d-flex m-2 p-2 nav-link 
-        @if ($title=='Dashboard')
-            {{ 'active' }}
-            @else
-            {{ 'text-white' }}
-        @endif 
-        " aria-current="page">
+        <a href="/dashboard" class="d-flex m-2 p-2 nav-link text-white 
+        {{ Request::is('dashboard') ?'active':'' }}" aria-current="page">
         <i class="bi bi-person mx-3"></i>
         <p class="m-0" style="justify-self: center">Profile</p>
         </a>
       </li>
       <li>
-        <a href="/dashboard/jadwal" class="nav-link d-flex m-2 p-2 nav-link
-        @if ($title=='Jadwal')
-        {{ 'active' }}
-        @else
-        {{ 'text-white' }}
-        @endif ">
+        <a href="/dashboard/jadwal" class="nav-link text-white d-flex m-2 p-2 nav-link
+        {{ Request::is('dashboard/jadwal') ?'active':'' }}" >
         <i class="bi bi-calendar-check mx-3"></i>
         <p class="m-0" style="justify-self: center">Jadwal</p>
         </a>
       </li>
       <li>
-        <a href="/dashboard/artikel" class="nav-link d-flex m-2 p-2 nav-link @if ($title=='Artikel')
-        {{ 'active' }}
-        @else
-        {{ 'text-white' }}
-        @endif ">
+        <a href="/dashboard/artikel" class="nav-link d-flex m-2 p-2 nav-link text-white
+        {{ Request::is('dashboard/artikel') ?'active':'' }} ">
         <i class="bi bi-sticky mx-3"></i>
           <p class="m-0" style="justify-self: center">Artikel</p>
         </a>

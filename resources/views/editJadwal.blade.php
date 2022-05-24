@@ -2,10 +2,10 @@
 @section('content')
 @include('partials.sidebar')
 <div class="container-fluid d-flex flex-column mside">
-    <p class="h2 ms-4 mt-3">Buat Jadwal</p>
+    <p class="h2 ms-4 mt-3">Edit Jadwal</p>
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Add</li>
+        <li class="breadcrumb-item active" aria-current="page">Edit</li>
     </ol>
     <form method="post" action="/dashboard/jadwal/{{ $jadwal->id }}">
         @method('put')

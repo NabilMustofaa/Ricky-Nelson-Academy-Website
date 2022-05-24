@@ -15,7 +15,7 @@ class DashboardJadwalController extends Controller
      */
     public function index()
     {
-        $peserta = Peserta::find(1);
+        
         return view('dashboardJadwal',[
             'title'=> 'Jadwal',
             'jadwal'=>Jadwal::all(),
@@ -29,7 +29,7 @@ class DashboardJadwalController extends Controller
      */
     public function create()
     {
-        $peserta = Peserta::find(1);
+        
         return view('formJadwal',[
             'title'=> 'Jadwal',
         ]);

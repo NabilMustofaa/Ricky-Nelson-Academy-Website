@@ -31,6 +31,7 @@ Route::get('/dashboard',[DashboardController::class, 'dashboard']);
 
 
 Route::resource('/dashboard/artikel',DashboardArtikelController::class);
+Route::get('/dashboard/artikel/checkSlug',[DashboardArtikelController::class,'checkSlug']);
 
 Route::resource('/dashboard/jadwal',DashboardJadwalController::class);
 

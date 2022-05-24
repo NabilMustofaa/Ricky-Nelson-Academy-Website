@@ -35,6 +35,9 @@ class DatabaseSeeder extends Seeder
         kategori_artikel::create([
             'nama_kategori'=>'Hasil Pertandingan'
         ]);
+        kategori_artikel::create([
+            'nama_kategori'=>'Tips Bermain'
+        ]);
 
 
         Artikel::create([

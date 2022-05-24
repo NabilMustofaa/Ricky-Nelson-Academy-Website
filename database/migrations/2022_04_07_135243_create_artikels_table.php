@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('judul_artikel');
             $table->text('highlight_artikel');
             $table->text('isi_artikel');
+            $table->string('image');
             $table->timestamps();
         });
     }

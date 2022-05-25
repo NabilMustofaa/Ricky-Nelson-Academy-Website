@@ -8,7 +8,7 @@
         <li class="breadcrumb-item"><a href="#">Artikel</a></li>
         <li class="breadcrumb-item active" aria-current="page">Edit</li>
     </ol>
-    <form method="post" action="/dashboard/artikel/{{ $artikel->id }}">
+    <form method="post" action="/dashboard/artikel/{{ $artikel->id }}" enctype="multipart/form-data">
         @method('put')
         @csrf
         <div class="row justify-content-between">
@@ -59,6 +59,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Isi artikel</label>
+            
             @error('isi_artikel')
             <p class="text-danger">Masukkan isi dari artikel</p>
             @enderror
@@ -67,9 +68,23 @@
 
 
           </div>
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Input Gambar</label>
-            <input class="form-control" type="file" id="formFile">
+          <div class="mb-3">
+            <label for="image" class="form-label">Input Gambar</label>
+            <input type="hidden" name="oldImage" value="{{ $artikel->image }}">
+
+            @if ($artikel->image)
+            <img class="img-fluid img-preview col-sm-4 my-2 d-flex" src="{{ asset('storage/' . $artikel->image) }}">
+            @else
+            <img class="img-fluid img-preview col-sm-4 my-2">
+            @endif
+
+            <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
+
+            @error('image')
+            <div class="invalid-feedback">
+               {{$message}}
+            </div>
+            @enderror
           </div>
         <button class="btn btn-success" type="submit">Update Artikel</button>
     </form>
@@ -84,5 +99,18 @@
         preslug = preslug.replace(/ /g,"-");
         slug.value = preslug.toLowerCase();
     });
+
+    function previewImage() {
+        const image= document.querySelector('#image')
+        const imgPreview =document.querySelector('.img-preview')
+
+        imgPreview.style.display='flex'
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+
+        oFReader.onload=function(oFREvent){
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
 </script>
 @endsection

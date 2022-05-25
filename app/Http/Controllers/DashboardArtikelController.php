@@ -5,6 +5,7 @@ use App\Models\Artikel;
 use App\Models\kategori_artikel;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class DashboardArtikelController extends Controller
@@ -103,14 +104,26 @@ class DashboardArtikelController extends Controller
             'judul_artikel'=>'required|max:255',
             'kategori_id'=>'required',
             'isi_artikel'=>'required',
+            'image'=> 'image|file|max:2048'
         ];
 
         if($request->slug != $artikel->slug ){
             $rules['slug']='required|unique:artikels';
         }
+
+        
+
         $validatedData = $request->validate($rules);
 
         $validatedData['highlight_artikel']=Str::limit(strip_tags($request->isi_artikel),200,'...');
+
+        if($request->file('image')){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image']=$request->file('image')->store('artikel-images');
+        }
+
 
         Artikel::where('id',$artikel->id)->update($validatedData);
 
@@ -125,6 +138,9 @@ class DashboardArtikelController extends Controller
      */
     public function destroy(Artikel $artikel)
     {
+        if($artikel->image){
+            Storage::delete($artikel->image);
+        }
         Artikel::destroy($artikel->id);
         
         return redirect('/dashboard/artikel')->with('success','Jadwal terhapus');

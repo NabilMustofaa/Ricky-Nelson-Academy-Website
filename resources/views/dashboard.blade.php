@@ -14,13 +14,13 @@
                 </div>
                 <div class="card m-2 py-2 px-2 bg-white bg-opacity-50" style="width: 80%;">
                     <p class="h5 m-2">Nama</p>
-                    <p class="card p-2 bg-white bg-opacity-10">Muhammad Nabil Mustofa</p>
+                    <p class="card p-2 bg-white bg-opacity-10">{{ auth()->user()->name }}</p>
                     <p class="h5 m-2">Jabatan</p>
-                    <p class="card p-2">Kepala Pelatih</p>
+                    <p class="card p-2">{{ $staff->Jabatan }}</p>
                     <p class="h5 m-2">Nomor Telephone</p>
-                    <p class="card p-2">082011633046</p>
+                    <p class="card p-2">{{ $staff->NoHp }}</p>
                     <p class="h5 m-2">Alamat</p>
-                    <p class="card p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse veniam vitae illum exercitationem veritatis repellat iure, quod voluptas, quos consectetur laborum est libero architecto nisi provident enim iste, ullam voluptatem!</p>
+                    <p class="card p-2">{{ $staff->Alamat }}</p>
                     
                 </div>
             </div>

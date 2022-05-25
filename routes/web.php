@@ -4,6 +4,7 @@ use App\Http\Controllers\BasicController;
 use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardJadwalController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use App\Models\statistik;
@@ -19,21 +20,22 @@ use App\Models\statistik;
 */
 
 Route::get('/', [BasicController::class,'home']);
-
-Route::get('/login',[BasicController::class,'login'] );
-Route::get('/about',[BasicController::class,'about'] );
+Route::get('/about',[BasicController::class,'about']);
 Route::get('/artikel',[BasicController::class,'artikel'] );
-
 Route::get('/jadwal',[BasicController::class, 'jadwal']);
 Route::get('/jadwal/{typeJadwal}',[BasicController::class, 'selectJadwal']);
 
-Route::get('/dashboard',[DashboardController::class, 'dashboard']);
+Route::get('/login',[LoginController::class,'login'])->middleware('guest')->name('login');
+Route::post('/login',[LoginController::class,'authenticate']);
+Route::post('logout',[LoginController::class,'logout']);
+
+Route::get('/dashboard',[DashboardController::class, 'dashboard'])->middleware('auth');
 
 
-Route::resource('/dashboard/artikel',DashboardArtikelController::class);
+Route::resource('/dashboard/artikel',DashboardArtikelController::class)->middleware('auth');
 Route::get('/dashboard/artikel/checkSlug',[DashboardArtikelController::class,'checkSlug']);
 
-Route::resource('/dashboard/jadwal',DashboardJadwalController::class);
+Route::resource('/dashboard/jadwal',DashboardJadwalController::class)->middleware('auth');
 
 
 

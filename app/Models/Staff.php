@@ -11,4 +11,7 @@ class Staff extends Model
     protected $guarded=[
         'id'
     ];
+    public function User(){
+        return $this->belongsTo(User::class, 'foreign_key');
+    }
 }

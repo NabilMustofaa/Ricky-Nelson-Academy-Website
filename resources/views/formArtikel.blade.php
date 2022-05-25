@@ -68,7 +68,8 @@
           </div>
         <div class="mb-3">
             <label for="image" class="form-label">Input Gambar</label>
-            <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image">
+            <img class="img-fluid img-preview col-sm-4 mx-auto my-2" src="" >
+            <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
             @error('image')
             <div class="invalid-feedback">
                {{$message}}
@@ -88,5 +89,20 @@
         preslug = preslug.replace(/ /g,"-");
         slug.value = preslug.toLowerCase();
     });
+
+    
+
+    function previewImage() {
+        const image= document.querySelector('#image')
+        const imgPreview =document.querySelector('.img-preview')
+
+        imgPreview.style.display='flex'
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+
+        oFReader.onload=function(oFREvent){
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
 </script>
 @endsection

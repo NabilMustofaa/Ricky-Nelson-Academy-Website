@@ -28,11 +28,7 @@ class BasicController extends Controller
         ]);
     }
 
-    public function login() {
-        return view('login',[
-            'title'=> 'Login'
-        ]);
-    }
+   
 
     public function jadwal() {
         return view('jadwal',[

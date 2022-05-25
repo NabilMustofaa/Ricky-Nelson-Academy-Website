@@ -10,6 +10,7 @@ use App\Models\Statistik;
 use App\Models\Peserta;
 use App\Models\Artikel;
 use App\Models\kategori_artikel;
+use App\Models\Staff;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,11 +23,17 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         User::create([
-            'name'=>'nabil',
+            'name'=>'Muhammad Nabil Mustofa',
             'email'=>'nabil@gmail.com',
-            'password'=> bcrypt('nabil')
+            'password'=> bcrypt('nabil'),
+            'isAdmin'=>true,
         ]);
-        
+        Staff::create([
+            'user_id'=>1,
+            'Jabatan'=>'Kepala Pelatih',
+            'NoHp'=>'085748969806',
+            'Alamat'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sed consequuntur est impedit cumque doloremque quibusdam ratione deleniti culpa minus itaque, rerum minima, repellat, illum nostrum vero sit molestias porro.'
+        ]);
         Peserta::create([
             'posisi'=>"left wing",
             'levelpemain'=> 'pemula',

@@ -2,30 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Peserta;
+use App\Models\Staff;
 use App\Models\User;
 use App\Models\Statistik;
 use App\Models\Artikel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
     public function dashboard(){
-        $peserta = Peserta::find(1);
+        $staff=User::find(auth()->user()->id)->staff;
         return view('dashboard',[
             'title'=> 'Dashboard',
-            'peserta' => $peserta,
-            'statistik'=> $peserta->statistik
+            'staff'=>$staff
         ]);
     }
 
-
-
-
-    public function formArtikel(){
-
-    }
-    public function editArtikel($id){
-        
-    }
 }

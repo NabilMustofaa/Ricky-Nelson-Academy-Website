@@ -32,8 +32,12 @@
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
             <p class="my-auto">Nabil</p>
         </div>
-        <a href="#" class="btn bg-danger text-white p-1">
-            <i class="bi bi-box-arrow-left mx-1 mt-2"  width="20" height="20"></i>
+        <form action="/logout" method="POST">
+          @csrf
+          <button class="btn bg-danger text-white p-1"> <i class="bi bi-box-arrow-left mx-1 mt-2"  width="20" height="20"></i></button>
+        </form>
+
+           
         </a>
     </div>
 </div>

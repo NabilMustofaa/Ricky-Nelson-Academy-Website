@@ -200,3 +200,10 @@ input[type=text], input[type=password] {
 .footer .credit a {
     color: var(--red);
 }
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 30%;
+    overflow-y: auto;
+    width: auto;
+    }

@@ -35,9 +35,10 @@ class DatabaseSeeder extends Seeder
             'Alamat'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sed consequuntur est impedit cumque doloremque quibusdam ratione deleniti culpa minus itaque, rerum minima, repellat, illum nostrum vero sit molestias porro.'
         ]);
         Peserta::create([
-            'posisi'=>"left wing",
+            'posisi'=>"Left Wing",
             'levelpemain'=> 'pemula',
-            'user_id'=>1
+            'user_id'=>1,
+            'umur'=>'18'
         ]);
         kategori_artikel::create([
             'nama_kategori'=>'Hasil Pertandingan'

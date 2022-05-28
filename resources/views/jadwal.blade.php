@@ -16,6 +16,7 @@
             <tr>
                 <th>Nama Jadwal</th>
                 <th>Tanggal</th>
+                <th>Waktu</th>
                 <th>Level</th>
             </tr>
         </thead>
@@ -24,7 +25,8 @@
             @foreach ($jadwal as $item)
             <tr>
                 <td>{{ $item->namaJadwal }}</td>
-                <td>{{ $item->tanggalWaktu }}</td>
+                <td>{{ $item->tanggalJadwal }}</td>
+                <td>{{ $item->waktuJadwal }}</td>
                 <td>{{ $item->levelJadwal }} </td>
             </tr>
             @endforeach

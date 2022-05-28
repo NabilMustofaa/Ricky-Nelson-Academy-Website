@@ -33,7 +33,7 @@
                 <td>{{ $artikel->judul_artikel }}</td>
                 <td>
                     <div>
-                        <a href="" class="btn btn-secondary">View</a>
+                        {{-- <a href="/dashboard/artikel/{{ $artikel->id }}" class="btn btn-secondary">View</a> --}}
                         <a href="/dashboard/artikel/{{ $artikel->id }}/edit/" class="btn btn-warning">Edit</a>
                         <form action="/dashboard/artikel/{{ $artikel->id }}" method="post" class="d-inline">
                           @method('delete')

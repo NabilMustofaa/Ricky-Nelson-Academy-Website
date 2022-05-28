@@ -8,21 +8,54 @@
         
         <div class="d-flex flex-column m-0 ">
             <div class="d-flex flex-row m-0">
+              <form action="/dashboard" method="put" class="d-flex">
                 <div class="card text-center m-2 p-5 d-flex flex-col align-items-center bg-white bg-opacity-50" style="width: 25%;">
-                    <img src="{{ asset('img/nabil.jpg') }}" class="rounded float-start mx-auto d-block" width="200px">
-                    <button type="button" class="btn btn-success mt-4">Edit Profile</button>
-                </div>
-                <div class="card m-2 py-2 px-2 bg-white bg-opacity-50" style="width: 80%;">
-                    <p class="h5 m-2">Nama</p>
-                    <p class="card p-2 bg-white bg-opacity-10">{{ auth()->user()->name }}</p>
-                    <p class="h5 m-2">Jabatan</p>
-                    <p class="card p-2">{{ $staff->Jabatan }}</p>
-                    <p class="h5 m-2">Nomor Telephone</p>
-                    <p class="card p-2">{{ $staff->NoHp }}</p>
-                    <p class="h5 m-2">Alamat</p>
-                    <p class="card p-2">{{ $staff->Alamat }}</p>
-                    
-                </div>
+                  <img src="{{ asset('img/nabil.jpg') }}" class="rounded float-start mx-auto d-block" width="200px">
+                  
+                  {{-- <button type="button" class="btn btn-success mt-4" id="change" onclick="input()">Edit Profile</button> --}}
+                  <button type="button" class="btn btn-danger mt-4 d-none" id="cancel" onclick="cancel()">Cancel Profile</button>
+                  {{-- <button type="submit" class="btn btn-primary mt-4 d-none" id="edit">Update Profile</button> --}}
+              </div>
+              <div class="card m-2 p-4 bg-white bg-opacity-50 " style="width: 62vw;">
+                  <p class="h5 m-2">Nama</p>
+                  <input class="card p-2 bg-white bg-opacity-10 @error('name') is-invalid @enderror" value="{{ auth()->user()->name }}" id="name" name="name" disabled>
+                  @error('name')
+                  <div class="invalid-feedback">
+                    {{$message}}
+                  </div>
+                  @enderror
+                  <p class="h5 m-2">Jabatan</p>
+                  <input class="card p-2 bg-white bg-opacity-10 @error('Jabatan') is-invalid @enderror" value="{{ $staff->Jabatan }}" id="jabatan" name="Jabatan" disabled>
+                  @error('Jabatan')
+                  <div class="invalid-feedback">
+                    {{$message}}
+                  </div>
+                  @enderror
+                  <p class="h5 m-2">Nomor Telephone</p>
+                  <input class="card p-2 bg-white bg-opacity-10 @error('NoHp') is-invalid @enderror" value="{{ $staff->NoHp }}" id="nohp" name="NoHp" disabled>
+                  @error('NoHp')
+                  <div class="invalid-feedback">
+                    {{$message}}
+                  </div>
+                  @enderror
+                  <p class="h5 m-2">Alamat</p>
+                  <textarea class="card p-2 bg-white bg-opacity-10 @error('Alamat') is-invalid @enderror" id="alamat" name="Alamat" rows="3" disabled>{{ $staff->Alamat }}</textarea>
+                  @error('Alamat')
+                  <div class="invalid-feedback">
+                    {{$message}}
+                  </div>
+                  @enderror
+                  <p class="h5 m-2 d-none" id="Image">Image</p>
+                  <input class="form-control mt-2 @error('userImage') is-invalid @enderror d-none" type="file" id="userImage" name="userImage" >
+                  @error('userImage')
+                  <div class="invalid-feedback">
+                    {{$message}}
+                  </div>
+                  @enderror
+              </div>
+
+              </form>
+                
             </div>
             <p class="h3 ms-4 mt-3">Jadwal Mendatang</p>
             <table class="table table-secondary table-hover w-auto mt-2 ms-4 me-4 border rounded overflow-hidden">
@@ -77,5 +110,32 @@
             @endforeach
             </div> --}}
     </div>
-    
+
+    <script>
+      function input(){
+        let name = document.getElementById("name");
+        let noHp = document.getElementById("nohp");
+        let Alamat = document.getElementById("alamat");
+        let Jabatan = document.getElementById("jabatan");
+        let image = document.getElementById("userImage");
+        let image2 = document.getElementById("Image");
+        let edit = document.getElementById("edit");
+        let cancel= document.getElementById("cancel");
+        let change = document.getElementById("change");
+
+        
+        name.removeAttribute('disabled');
+        noHp.removeAttribute('disabled');
+        Alamat.removeAttribute('disabled');
+        Jabatan.removeAttribute('disabled');
+        change.classList.add("d-none");
+        image.classList.remove("d-none");
+        image2.classList.remove("d-none");
+        edit.classList.remove("d-none");
+        cancel.classList.remove("d-none");
+        
+
+      }
+
+    </script>
 @endsection

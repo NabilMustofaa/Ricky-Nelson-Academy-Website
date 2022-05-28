@@ -15,7 +15,7 @@
                 <div class="input-group-text">
                     <i class=" input-group-textbi bi-person-circle m-0"></i>
                 </div>
-                <input type="text" class="form-control m-0" value="Nabil Mustofa" disabled>
+                <input type="text" class="form-control m-0" value="{{ auth()->user()->name }}" disabled>
             </div>
             <div class="input-group mb-3 col-md-6">
                 <div class="input-group-text">

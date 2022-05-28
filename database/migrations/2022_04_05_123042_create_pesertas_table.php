@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string('posisi');
+            $table->integer('umur');
             $table->string('levelpemain');
             $table->timestamps();
            

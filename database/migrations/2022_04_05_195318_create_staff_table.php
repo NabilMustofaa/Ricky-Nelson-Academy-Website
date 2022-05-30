@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->string('Jabatan');
             $table->string('NoHp');
-            $table->string('Alamat');
+            $table->text('Alamat');
             $table->timestamps();
         });
     }

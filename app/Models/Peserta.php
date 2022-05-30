@@ -14,9 +14,14 @@ class Peserta extends Model
     ];
 
     public function User (){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id');
     }
+
+    public function Pendaftaran (){
+        return $this->belongsTo(Pendaftaran::class,'pendaftaran_id');
+    }
+
     public function Statistik (){
-        return $this->hasMany(Statistik::class);
+        return $this->hasMany(Statistik::class,'peserta_id');
     }
 }

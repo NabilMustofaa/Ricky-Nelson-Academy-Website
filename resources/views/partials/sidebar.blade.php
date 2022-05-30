@@ -27,21 +27,21 @@
       </li>
       <li>
         <a href="/dashboard/peserta" class="nav-link d-flex m-2 p-2 nav-link text-white
-        {{ Request::is('dashboard/artikel') ?'active':'' }} ">
+        {{ Request::is('dashboard/peserta') ?'active':'' }} ">
         <i class="bi bi-people mx-3"></i>
           <p class="m-0" style="justify-self: center">Peserta</p>
         </a>
       </li>
       <li>
-        <a href="/dashboard/peserta" class="nav-link d-flex m-2 p-2 nav-link text-white
-        {{ Request::is('dashboard/artikel') ?'active':'' }} ">
+        <a href="/dashboard/staff" class="nav-link d-flex m-2 p-2 nav-link text-white
+        {{ Request::is('dashboard/staff') ?'active':'' }} ">
         <i class="bi bi-person-badge mx-3"></i>
           <p class="m-0" style="justify-self: center">Staff</p>
         </a>
       </li>
       <li>
         <a href="/dashboard/pendaftar" class="nav-link d-flex m-2 p-2 nav-link text-white
-        {{ Request::is('dashboard/artikel') ?'active':'' }} ">
+        {{ Request::is('dashboard/pendaftaran') ?'active':'' }} ">
         <i class="bi bi-file-earmark-person mx-3"></i>
           <p class="m-0" style="justify-self: center">Pendaftar</p>
         </a>

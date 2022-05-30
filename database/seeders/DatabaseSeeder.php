@@ -10,6 +10,7 @@ use App\Models\Statistik;
 use App\Models\Peserta;
 use App\Models\Artikel;
 use App\Models\kategori_artikel;
+use App\Models\Pendaftaran;
 use App\Models\Staff;
 
 class DatabaseSeeder extends Seeder
@@ -26,7 +27,20 @@ class DatabaseSeeder extends Seeder
             'name'=>'Muhammad Nabil Mustofa',
             'email'=>'nabil@gmail.com',
             'password'=> bcrypt('nabil'),
-            'isAdmin'=>true,
+            'isAdmin'=>1,
+        ]);
+        User::create([
+            'name'=>'Muhammad Nabil Mustofa',
+            'email'=>'nabiluser@gmail.com',
+            'password'=> bcrypt('nabil'),
+            'isAdmin'=>0,
+        ]);
+        Pendaftaran::create([
+            'statusPembayaran'=>1,
+            'batasPembayaran'=>"2022-07-10",
+            'tempatLahir'=> "Surabaya",
+            'tanggalLahir'=>"2006-06-01",
+            'alamat'=> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sed consequuntur est impedit cumque doloremque quibusdam ratione deleniti culpa minus itaque, rerum minima, repellat, illum nostrum vero sit molestias porro."
         ]);
         Staff::create([
             'user_id'=>1,
@@ -36,8 +50,9 @@ class DatabaseSeeder extends Seeder
         ]);
         Peserta::create([
             'posisi'=>"Left Wing",
-            'levelpemain'=> 'pemula',
-            'user_id'=>1,
+            'levelpemain'=> 'Pemula',
+            'user_id'=>2,
+            'pendaftaran_id'=>1,
             'umur'=>'18'
         ]);
         kategori_artikel::create([
@@ -118,53 +133,53 @@ class DatabaseSeeder extends Seeder
         Statistik::create([
             'peserta_id'=>'1',
             'jadwal_id'=>'1',
-            'status'=>false
+            'status'=>0
         ]);
 
         Statistik::create([
             'peserta_id'=>'1',
             'jadwal_id'=>'2',
-            'status'=>false
+            'status'=>0
         ]);
 
         Statistik::create([
             'peserta_id'=>'2',
             'jadwal_id'=>'3',
-            'status'=>true
+            'status'=>1
         ]);
         Statistik::create([
             'peserta_id'=>'1',
             'jadwal_id'=>'3',
-            'status'=>false
+            'status'=>0
         ]);
 
         Statistik::create([
             'peserta_id'=>'1',
             'jadwal_id'=>'4',
-            'status'=>false
+            'status'=>1
         ]);
 
         Statistik::create([
             'peserta_id'=>'2',
             'jadwal_id'=>'4',
-            'status'=>true
+            'status'=>1
         ]);
         Statistik::create([
             'peserta_id'=>'1',
             'jadwal_id'=>'5',
-            'status'=>false
+            'status'=>0
         ]);
 
         Statistik::create([
             'peserta_id'=>'1',
             'jadwal_id'=>'6',
-            'status'=>false
+            'status'=>0
         ]);
 
         Statistik::create([
             'peserta_id'=>'2',
             'jadwal_id'=>'5',
-            'status'=>true
+            'status'=>1
         ]);
     }
 }

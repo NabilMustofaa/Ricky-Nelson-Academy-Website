@@ -7,16 +7,32 @@
         <p class="h2 ms-4 mt-3">Dashboard</p>
         
         <div class="d-flex flex-column m-0 ">
+          <form action="/dashboard/staff/{{ $staff->id }}" method="post" class="d-flex" enctype="multipart/form-data">
+            @method('put')
+            @csrf
             <div class="d-flex flex-row m-0">
-              <form action="/dashboard" method="put" class="d-flex">
                 <div class="card text-center m-2 p-5 d-flex flex-col align-items-center bg-white bg-opacity-50" style="width: 25%;">
-                  <img src="{{ asset('img/nabil.jpg') }}" class="rounded float-start mx-auto d-block" width="200px">
+                  <input type="hidden" name="oldImage" value="{{ $staff->User->image }}">
+                  @if ($staff->User->image)
+                  <img class="img-fluid img-preview rounded float-start mx-auto d-block d-flex" width="250px" src="{{ asset('storage/' . $staff->User->image) }}">
+                  @else
+                  <img class="img-fluid img-preview rounded float-start mx-auto d-block" width="250px">
+                  @endif
+
+                  <input class="form-control @error('image') is-invalid @enderror d-none" type="file" id="image" name="image" onchange="previewImage()">
+
+                  @error('image')
+                  <div class="invalid-feedback">
+                    {{$message}}
+                  </div>
+                  @enderror
+                  <button type="button" class="btn btn-success mt-4" id="change" onclick="input()">Edit Profile</button>
+
+                  <button type="submit" class="btn btn-primary mt-4 d-none" id="submit"> Update Profile </button>
                   
-                  {{-- <button type="button" class="btn btn-success mt-4" id="change" onclick="input()">Edit Profile</button> --}}
-                  <button type="button" class="btn btn-danger mt-4 d-none" id="cancel" onclick="cancel()">Cancel Profile</button>
-                  {{-- <button type="submit" class="btn btn-primary mt-4 d-none" id="edit">Update Profile</button> --}}
+                  {{-- <button type="button" class="btn btn-danger mt-4 d-none" id="cancel" onclick="cancel()">Cancel Profile</button> --}}
               </div>
-              <div class="card m-2 p-4 bg-white bg-opacity-50 " style="width: 62vw;">
+              <div class="card ms-2 my-2 p-4 bg-white bg-opacity-50 " style="width: 58vw;">
                   <p class="h5 m-2">Nama</p>
                   <input class="card p-2 bg-white bg-opacity-10 @error('name') is-invalid @enderror" value="{{ auth()->user()->name }}" id="name" name="name" disabled>
                   @error('name')
@@ -45,18 +61,9 @@
                     {{$message}}
                   </div>
                   @enderror
-                  <p class="h5 m-2 d-none" id="Image">Image</p>
-                  <input class="form-control mt-2 @error('userImage') is-invalid @enderror d-none" type="file" id="userImage" name="userImage" >
-                  @error('userImage')
-                  <div class="invalid-feedback">
-                    {{$message}}
-                  </div>
-                  @enderror
-              </div>
-
-              </form>
-                
+                </div>
             </div>
+          </form>
             <p class="h3 ms-4 mt-3">Jadwal Mendatang</p>
             <table class="table table-secondary table-hover w-auto mt-2 ms-4 me-4 border rounded overflow-hidden">
                 <thead>
@@ -117,9 +124,8 @@
         let noHp = document.getElementById("nohp");
         let Alamat = document.getElementById("alamat");
         let Jabatan = document.getElementById("jabatan");
-        let image = document.getElementById("userImage");
-        let image2 = document.getElementById("Image");
-        let edit = document.getElementById("edit");
+        let image = document.getElementById("image");
+        let edit = document.getElementById("submit");
         let cancel= document.getElementById("cancel");
         let change = document.getElementById("change");
 
@@ -130,12 +136,23 @@
         Jabatan.removeAttribute('disabled');
         change.classList.add("d-none");
         image.classList.remove("d-none");
-        image2.classList.remove("d-none");
         edit.classList.remove("d-none");
         cancel.classList.remove("d-none");
         
 
       }
+      function previewImage() {
+        const image= document.querySelector('#image')
+        const imgPreview =document.querySelector('.img-preview')
+
+        imgPreview.style.display='flex'
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+
+        oFReader.onload=function(oFREvent){
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
 
     </script>
 @endsection

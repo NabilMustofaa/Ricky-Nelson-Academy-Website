@@ -6,6 +6,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardJadwalController;
 use App\Http\Controllers\DashboardPesertaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\staffController;
+use App\Http\Controllers\StatistikController;
 use App\Models\Artikel;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -39,4 +41,5 @@ Route::get('/dashboard/artikel/checkSlug',[DashboardArtikelController::class,'ch
 
 Route::resource('/dashboard/jadwal',DashboardJadwalController::class)->middleware('auth');
 Route::resource('/dashboard/peserta',DashboardPesertaController::class)->middleware('auth');
+Route::resource('/dashboard/statistik',StatistikController::class)->middleware('auth');Route::resource('/dashboard/staff',staffController::class)->middleware('auth');
 

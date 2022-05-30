@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Artikel;
-use App\Models\Jadwal;
-use App\Models\kategori_artikel;
-use App\Models\Peserta;
 use App\Models\Statistik;
 use Illuminate\Http\Request;
 
-class DashboardPesertaController extends Controller
+class StatistikController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +14,7 @@ class DashboardPesertaController extends Controller
      */
     public function index()
     {
-        return view('dashboardPeserta',[
-            'title'=> 'Peserta',
-            'peserta'=>Peserta::all(),
-        ]);
+        //
     }
 
     /**
@@ -31,7 +24,7 @@ class DashboardPesertaController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -62,35 +55,28 @@ class DashboardPesertaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit( $id)
+    public function edit($id)
     {
-        $pesertas = Peserta::find($id);
-        $statistik = Statistik::where('peserta_id', $id)->get();
-        return view('editPeserta',[
-            'title'=> 'Jadwal',
-            'jadwal'=>$statistik,
-            'peserta'=>$pesertas
-        ]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  App\Models\Peserta $peserta
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
 
         $validatedData =$request->validate([
-            'posisi'=>'required',
-            'levelpemain'=>'required'
+            'status'=>'required'
         ]);
         
-        Peserta::where('id',$id)->update($validatedData);
+        Statistik::where('id',$id)->update($validatedData);
         
-        return redirect()->back()->with('success','Pemain berhasil dirubah');
+        return redirect()->back()->with('success','Status berhasil dirubah');
     }
 
     /**

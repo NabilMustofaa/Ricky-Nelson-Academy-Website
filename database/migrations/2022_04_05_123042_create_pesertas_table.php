@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('pesertas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
+            $table->foreignId('pendaftaran_id');
             $table->string('posisi');
             $table->integer('umur');
             $table->string('levelpemain');

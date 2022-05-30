@@ -12,6 +12,6 @@ class Staff extends Model
         'id'
     ];
     public function User(){
-        return $this->belongsTo(User::class, 'foreign_key');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

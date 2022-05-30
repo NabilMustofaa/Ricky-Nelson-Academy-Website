@@ -27,7 +27,10 @@
                   </div>
                   @enderror
                   <button type="button" class="btn btn-success mt-4" id="change" onclick="input()">Edit Profile</button>
+                  
                   <button type="submit" class="btn btn-primary mt-4 d-none" id="submit"> Update Profile </button>
+
+
                   <form action="/dashboard/staff/{{ $staff->id }}" method="post">
                     @method('delete')
                     @csrf

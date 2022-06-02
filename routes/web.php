@@ -33,13 +33,12 @@ Route::get('/login',[LoginController::class,'login'])->middleware('guest')->name
 Route::post('/login',[LoginController::class,'authenticate']);
 Route::post('logout',[LoginController::class,'logout']);
 
-Route::get('/dashboard',[DashboardController::class, 'dashboard'])->middleware('auth');
+Route::get('/beranda',[DashboardController::class, 'user'])->middleware(['auth','isAdmin:0']);
 
-
-Route::resource('/dashboard/artikel',DashboardArtikelController::class)->middleware('auth');
-Route::get('/dashboard/artikel/checkSlug',[DashboardArtikelController::class,'checkSlug']);
-
-Route::resource('/dashboard/jadwal',DashboardJadwalController::class)->middleware('auth');
-Route::resource('/dashboard/peserta',DashboardPesertaController::class)->middleware('auth');
-Route::resource('/dashboard/statistik',StatistikController::class)->middleware('auth');Route::resource('/dashboard/staff',staffController::class)->middleware('auth');
+Route::get('/dashboard',[DashboardController::class, 'dashboard'])->middleware(['auth','isAdmin:1']);
+Route::resource('/dashboard/artikel',DashboardArtikelController::class)->middleware(['auth','isAdmin:1']);
+Route::resource('/dashboard/jadwal',DashboardJadwalController::class)->middleware(['auth','isAdmin:1']);
+Route::resource('/dashboard/peserta',DashboardPesertaController::class)->middleware(['auth','isAdmin:1']);
+Route::resource('/beranda/statistik',StatistikController::class)->middleware(['auth','isAdmin:0']);
+Route::resource('/dashboard/staff',staffController::class)->middleware(['auth','isAdmin:1']);
 

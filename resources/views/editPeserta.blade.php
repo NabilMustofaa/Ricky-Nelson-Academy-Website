@@ -150,7 +150,7 @@
                     <td>{{ $item->jadwal->levelJadwal }}</td>
                     <td>
                         <div>
-                            <form action="/dashboard/statistik/{{ $item->id }}" method="post">
+                            <form action="/beranda/statistik/{{ $item->id }}" method="post">
                                 @method('put')
                                 @csrf
                                 <select id="status" name="status" class="form-control custom-select w-50">

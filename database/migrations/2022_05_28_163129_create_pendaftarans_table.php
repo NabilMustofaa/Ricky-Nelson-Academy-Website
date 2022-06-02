@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('pendaftarans', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('user_id');
             $table->boolean('statusPembayaran');
             $table->date('batasPembayaran');
             $table->string('tempatLahir');

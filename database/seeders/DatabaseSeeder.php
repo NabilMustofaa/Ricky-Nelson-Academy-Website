@@ -30,18 +30,36 @@ class DatabaseSeeder extends Seeder
             'isAdmin'=>1,
         ]);
         User::create([
-            'name'=>'Muhammad Nabil Mustofa',
+            'name'=>'Nabil User',
             'email'=>'nabiluser@gmail.com',
+            'password'=> bcrypt('nabil'),
+            'isAdmin'=>0,
+        ]);
+
+        User::create([
+            'name'=>'Nabil User Kedua',
+            'email'=>'nabiluser2@gmail.com',
             'password'=> bcrypt('nabil'),
             'isAdmin'=>0,
         ]);
         Pendaftaran::create([
             'statusPembayaran'=>1,
+            'user_id'=>2,
             'batasPembayaran'=>"2022-07-10",
             'tempatLahir'=> "Surabaya",
             'tanggalLahir'=>"2006-06-01",
             'alamat'=> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sed consequuntur est impedit cumque doloremque quibusdam ratione deleniti culpa minus itaque, rerum minima, repellat, illum nostrum vero sit molestias porro."
         ]);
+
+        Pendaftaran::create([
+            'statusPembayaran'=>0,
+            'user_id'=>3,
+            'batasPembayaran'=>"2022-07-10",
+            'tempatLahir'=> "Surabaya",
+            'tanggalLahir'=>"2006-06-01",
+            'alamat'=> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sed consequuntur est impedit cumque doloremque quibusdam ratione deleniti culpa minus itaque, rerum minima, repellat, illum nostrum vero sit molestias porro."
+        ]);
+
         Staff::create([
             'user_id'=>1,
             'Jabatan'=>'Kepala Pelatih',

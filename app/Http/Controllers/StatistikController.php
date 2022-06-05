@@ -15,7 +15,7 @@ class StatistikController extends Controller
     public function index()
     {
         
-        $statistik = Statistik::where('peserta_id', auth()->user()->id)->get();
+        $statistik = Statistik::where('peserta_id', auth()->user()->peserta->id)->get();
         return view('jadwalUser',[
             'title'=> 'Jadwal',
             'jadwal'=>$statistik,

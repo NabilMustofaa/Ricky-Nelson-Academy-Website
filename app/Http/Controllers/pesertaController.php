@@ -8,7 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class userController extends Controller
+class pesertaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -44,10 +44,10 @@ class userController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $User
+     * @param  \App\Models\Peserta  $peserta
      * @return \Illuminate\Http\Response
      */
-    public function show(User $User)
+    public function show(Peserta $peserta)
     {
         //
     }
@@ -55,10 +55,10 @@ class userController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $User
+     * @param  \App\Models\Peserta  $peserta
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $User)
+    public function edit(Peserta $peserta)
     {
         //
     }
@@ -67,11 +67,12 @@ class userController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $User
+     * @param  \App\Models\Peserta  $peserta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $User)
-    {
+    public function update(Request $request, $id)
+    {   
+        $peserta = Peserta::find($id);
 
         $rulesUser =[
             'name'=>'required|max:255',
@@ -99,21 +100,22 @@ class userController extends Controller
             $validatedUser['image']=$request->file('image')->store('user-images');
         }
         
-        User::where('id',$User->id)->update($validatedUser);
-        Peserta::where('id',$User->Peserta->id)->update($validatedPeserta);
-        
-        Pendaftaran::where('id',$User->Peserta->pendaftaran_id)->update($validatedPeserta);
 
-        return redirect()->back()->with('success','Artikel telah berhasil diupdate');
+        
+        Peserta::where('id',$peserta->id)->update($validatedPeserta);
+        User::where('id',$peserta->user_id)->update($validatedUser);
+        Pendaftaran::where('id',$peserta->pendaftaran_id)->update($validatedPendaftaran);
+
+        return redirect('/beranda')->with('success','Artikel telah berhasil diupdate');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $User
+     * @param  \App\Models\Peserta  $peserta
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $User)
+    public function destroy(Peserta $peserta)
     {
         //
     }

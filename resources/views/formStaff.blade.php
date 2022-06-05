@@ -98,6 +98,7 @@
                 </div>
                 <button class="btn btn-success mx-3 mt-3" type="submit">Buat Staff</button>
             </div>
+            <input type="hidden" name="isAdmin"  id="isAdmin" value="1">
             <img class="img-fluid img-preview col-sm-4 my-2" src="" width="150px">
             
     </form>

@@ -7,7 +7,7 @@
         <p class="h2 ms-4 mt-3">Dashboard</p>
         
         <div class="d-flex flex-column m-0 ">
-          <form action="/dashboard/peserta/{{ $user->id }}" method="post" class="d-flex" enctype="multipart/form-data">
+          <form action="/beranda/peserta/{{ $user->id }}" method="post" class="d-flex" enctype="multipart/form-data">
             @method('put')
             @csrf
             <div class="d-flex flex-row m-0">
@@ -41,19 +41,77 @@
                   </div>
                   @enderror
                   <p class="h5 m-2">Posisi</p>
-                  <input class="card p-2 bg-white bg-opacity-10 @error('posisi') is-invalid @enderror" value="{{ $user->posisi }}" id="posisi" name="posisi" disabled>
-                  @error('posisi')
-                  <div class="invalid-feedback">
-                    {{$message}}
-                  </div>
-                  @enderror
+                  <select id="posisi" name="posisi" class="card p-2 bg-white bg-opacity-10" disabled>
+                    @if ($user->posisi == 'Goal Keeper')
+                    <option value="Goal Keeper" selected>Goal Keeper</option>
+                    @else
+                    <option value="Goal Keeper" >Goal Keeper</option>
+                    @endif
+                    @if ($user->posisi == 'Right Back')
+                    <option value="Right Back" selected>Right Back</option>
+                    @else
+                    <option value="Right Back">Right Back</option>
+                    @endif
+                    @if ($user->posisi == 'Center Back')
+                    <option value="Center Back" selected>Center Back</option>
+                    @else
+                    <option value="Center Back">Center Back</option>
+                    @endif
+                    @if ($user->posisi == 'Left Back')
+                    <option value="Left Back" selected>Left Back</option>
+                    @else
+                    <option value="Left Back" >Left Back</option>
+                    @endif
+                    @if ($user->posisi == 'Defensive Midfielder')
+                    <option value="Defensive Midfielder" selected>Defensive Midfielder</option>
+                    @else
+                    <option value="Defensive Midfielder">Defensive Midfielder</option>
+                    @endif
+                    @if ($user->posisi == 'Center Midfielder')
+                    <option value="Center Midfielder" selected>Center Midfielder</option>
+                    @else
+                    <option value="Center Midfielder">Center Midfielder</option>
+                    @endif
+                    @if ($user->posisi == 'Attacking Midfielder')
+                    <option value="Attacking Midfielder" selected>Attacking Midfielder</option>
+                    @else
+                    <option value="Attacking Midfielder" >Attacking Midfielder</option>
+                    @endif
+                    @if ($user->posisi == 'Right Wing')
+                    <option value="Right Wing" selected>Right Wing</option>
+                    @else
+                    <option value="Right Wing">Right Wing</option>
+                    @endif
+                    @if ($user->posisi == 'Left Wing')
+                    <option value="Left Wing" selected>Left Wing</option>
+                    @else
+                    <option value="Left Wing">Left Wing</option>
+                    @endif
+                    @if ($user->posisi == 'Striker')
+                    <option value="Striker" selected>Striker</option>
+                    @else
+                    <option value="Striker" >Striker</option>
+                    @endif
+                   
+                    </select>
                   <p class="h5 m-2">Tingkat Pemain</p>
-                  <input class="card p-2 bg-white bg-opacity-10 @error('levelpemain') is-invalid @enderror" value="{{ $user->levelpemain }}" id="levelpemain" name="levelpemain" disabled>
-                  @error('levelpemain')
-                  <div class="invalid-feedback">
-                    {{$message}}
-                  </div>
-                  @enderror
+                  <select id="levelpemain" name="levelpemain" class="card p-2 bg-white bg-opacity-10" disabled>
+                    @if ($user->levelpemain == 'Pemula')
+                    <option value="Pemula" selected>Pemula</option>
+                    @else
+                    <option value="Pemula" >Pemula</option>
+                    @endif
+                    @if ($user->levelpemain == 'Menengah')
+                    <option value="Menengah" selected>Menengah</option>
+                    @else
+                    <option value="Menengah">Menengah</option>
+                    @endif
+                    @if ($user->levelpemain == 'Profesional')
+                    <option value="Profesional" selected>Profesional</option>
+                    @else
+                    <option value="Profesional">Profesional</option>
+                    @endif
+                    </select>
                   <p class="h5 m-2">Umur</p>
                   <input class="card p-2 bg-white bg-opacity-10 @error('umur') is-invalid @enderror" value="{{ $user->umur }}" id="umur" name="umur" disabled>
                   @error('umur')
@@ -107,12 +165,18 @@
         let name = document.getElementById("name");
         let umur = document.getElementById("umur");
         let image = document.getElementById("image");
+        let posisi = document.getElementById("posisi");
+        let level = document.getElementById("levelpemain");
+        let alamat = document.getElementById('alamat');
         let edit = document.getElementById("submit");
         let change = document.getElementById("change");
 
         
         name.removeAttribute('disabled');
         umur.removeAttribute('disabled');
+        level.removeAttribute('disabled');
+        posisi.removeAttribute('disabled');
+        alamat.removeAttribute('disabled')
         change.classList.add("d-none");
         image.classList.remove("d-none");
         edit.classList.remove("d-none");

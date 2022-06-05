@@ -4,10 +4,12 @@ use App\Http\Controllers\BasicController;
 use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardJadwalController;
+use App\Http\Controllers\dashboardPendaftaran;
 use App\Http\Controllers\DashboardPesertaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\staffController;
 use App\Http\Controllers\StatistikController;
+use App\Http\Controllers\pesertaController;
 use App\Models\Artikel;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
@@ -41,4 +43,5 @@ Route::resource('/dashboard/jadwal',DashboardJadwalController::class)->middlewar
 Route::resource('/dashboard/peserta',DashboardPesertaController::class)->middleware(['auth','isAdmin:1']);
 Route::resource('/beranda/statistik',StatistikController::class)->middleware(['auth','isAdmin:0']);
 Route::resource('/dashboard/staff',staffController::class)->middleware(['auth','isAdmin:1']);
-
+Route::resource('/dashboard/pendaftar',dashboardPendaftaran::class)->middleware(['auth','isAdmin:1']);
+Route::resource('/beranda/peserta',pesertaController::class)->middleware(['auth','isAdmin:0']);

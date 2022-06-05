@@ -44,12 +44,13 @@ class staffController extends Controller
      */
     public function store(Request $request)
     {
-
+        
         $validatedUser=$request->validate([
             'name'=>'required',
             'email'=>'required|unique:users',
             'password'=>'required',
-            'image' => 'file|image'
+            'isAdmin'=>'required',
+            'image' => 'file|image',
         ]);
 
         $validatedStaff=$request->validate([
@@ -59,7 +60,11 @@ class staffController extends Controller
         ]);
         
         $validatedUser['password']=Hash::make($validatedUser['password']);
-        $validatedUser['image']=$request->file('image')->store('user-images');
+        
+        if($request->file('image')){
+            $validatedUser['image']=$request->file('image')->store('user-images');
+        }
+
         User::create($validatedUser);
         
         

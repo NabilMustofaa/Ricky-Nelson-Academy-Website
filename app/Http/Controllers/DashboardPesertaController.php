@@ -90,7 +90,7 @@ class DashboardPesertaController extends Controller
         
         Peserta::where('id',$id)->update($validatedData);
         
-        return redirect()->back()->with('success','Pemain berhasil dirubah');
+        return redirect('/dashboard/peserta')->with('success','Pemain berhasil dirubah');
     }
 
     /**

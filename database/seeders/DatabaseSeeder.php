@@ -73,6 +73,7 @@ class DatabaseSeeder extends Seeder
             'pendaftaran_id'=>1,
             'umur'=>'18'
         ]);
+        
         kategori_artikel::create([
             'nama_kategori'=>'Hasil Pertandingan'
         ]);

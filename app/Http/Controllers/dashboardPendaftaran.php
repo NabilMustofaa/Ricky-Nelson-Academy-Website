@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pendaftaran;
+use App\Models\Peserta;
 use Illuminate\Http\Request;
 
 class dashboardPendaftaran extends Controller
@@ -14,7 +15,10 @@ class dashboardPendaftaran extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboardPendaftaran',[
+            'title'=> 'Peserta',
+            'peserta'=>Pendaftaran::where('statusPembayaran',0)->get(),
+        ]);
     }
 
     /**
@@ -67,9 +71,27 @@ class dashboardPendaftaran extends Controller
      * @param  \App\Models\Pendaftaran  $pendaftaran
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pendaftaran $pendaftaran)
+    public function update(Request $request, $id)
     {
-        //
+        
+        $validated=$request->validate([
+            'statusPembayaran'=>'required'
+        ]);
+
+        Pendaftaran::where('id',$id)->update($validated);
+
+        $dataPeserta=[
+            'user_id'=>Pendaftaran::find($id)->user_id,
+            'pendaftaran_id'=>$id,
+            'posisi'=>'Goal keeper',
+            'umur'=>18,
+            'levelpemain'=>'Pemula'
+        ];
+
+        Peserta::create($dataPeserta);
+
+        return redirect('/dashboard/pendaftar')->with('success','Pendaftar Telah Menjadi Peserta');
+
     }
 
     /**

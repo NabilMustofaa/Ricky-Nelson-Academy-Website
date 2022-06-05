@@ -1,7 +1,7 @@
 <div class=" d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 17vw; height:100vh; position:fixed">
-    <div href="/" class="mb-3 ms-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <span class="h4">Ricky Nelson <br> Academy</span>
-    </div>
+  <div href="/" class="mb-3 ms-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <a href="/" class="h4 text-decoration-none text-white">Ricky Nelson <br> Academy</a>
+  </div>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">

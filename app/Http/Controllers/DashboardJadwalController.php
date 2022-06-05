@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Peserta;
 use App\Models\Jadwal;
-
+use App\Models\Statistik;
 use Illuminate\Http\Request;
 
 class DashboardJadwalController extends Controller
@@ -50,9 +50,20 @@ class DashboardJadwalController extends Controller
             'levelJadwal'=>'required',
             'typeJadwal'=>'required'
         ]);
+        $pesertas = Peserta::where('levelpemain',$request->levelJadwal)->get();
 
         Jadwal::create($validatedData);
-        
+        foreach ($pesertas as $peserta) {
+            
+            $stat=[
+                'peserta_id'=>$peserta->id,
+                'jadwal_id'=>Jadwal::latest('id')->first()->id,
+                'status'=>0
+            ];
+
+            Statistik::create($stat);
+        }
+
         return redirect('/dashboard/jadwal')->with('success','Jadwal Baru Ditambahkan');
     }
 

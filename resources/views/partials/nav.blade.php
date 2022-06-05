@@ -37,10 +37,46 @@
                 </ul>
             </div>
             <div class="navbar align-self-center d-flex">
+                @auth
+                @if (auth()->user()->isAdmin==1)
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Hello, {{ auth()->user()->name }}
+                    </button>
+                    <div class="dropdown-menu w-100" aria-labelledby="dropdownMenu2">
+                      <a href="/dashboard" class="dropdown-item" >Profile</a>
+                      <a href="/dashboard/jadwal" class="dropdown-item" >Jadwal</a>
+                      <a href="/dashboard/artikel" class="dropdown-item" >Artikel</a>
+                      <a  href="/dashboard/peserta" class="dropdown-item" >Peserta</a>
+                      <div class="dropdown-divider"></div>
+                      <form action="/logout" method="POST" class="m-0">
+                        @csrf
+                        <button class="dropdown-item" type="submit">Log Out</button>
+                      </form>
+                  </div>
+                @else
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Hello, {{ auth()->user()->name }}
+                    </button>
+                    <div class="dropdown-menu w-100" aria-labelledby="dropdownMenu2">
+                      <a href="/beranda" class="dropdown-item" >Profile</a>
+                      <a href="/beranda/statistik" class="dropdown-item" >Jadwal</a>
+                      <div class="dropdown-divider"></div>
+                      <form action="/logout" method="POST" class="m-0">
+                        @csrf
+                        <button class="dropdown-item" type="submit">Log Out</button>
+                      </form>
+                  </div>           
+                @endif
+                @else  
                 <a class="nav-icon position-relative text-decoration-none" href="/login" style="color: white">
                     <i class="fa fa-fw fa-user text-light mr-1" ></i>
                     Login
                 </a>
+                @endauth
+                
+                
             </div>
         </div>
 

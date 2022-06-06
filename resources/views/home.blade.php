@@ -221,4 +221,5 @@
     <!-- Section: Images -->
   </section>
   <!-- Modal gallery -->
+  @include('partials.footer')
 @endsection

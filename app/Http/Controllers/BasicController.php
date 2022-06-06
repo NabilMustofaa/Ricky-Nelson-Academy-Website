@@ -27,6 +27,13 @@ class BasicController extends Controller
 
         ]);
     }
+    public function viewArtikel($id) {
+        return view('detailArtikel',[
+            'title'=> 'Artikel',
+            'artikel'=>Artikel::find($id),
+
+        ]);
+    }
 
    
 

@@ -6,6 +6,7 @@ use App\Models\Staff;
 use App\Models\User;
 use App\Models\Statistik;
 use App\Models\Artikel;
+use App\Models\Jadwal;
 use App\Models\Peserta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,10 +20,12 @@ class DashboardController extends Controller
             'staff'=>$staff
         ]);
     }
+
     public function user(){
         
         $user=User::find(auth()->user()->id)->peserta;
-        $statistik=Statistik::where('peserta_id',$user->id)->get();
+        $statistik=Statistik::where('peserta_id',$user->id)->latest()->get();
+
         $totalHadirLatihan=0;
         $totalHadirTanding=0;
         $tidakHadirLatihan=0;
@@ -51,11 +54,12 @@ class DashboardController extends Controller
             'tidakLatihan'=>$tidakHadirLatihan,
             'tidakTanding'=>$tidakHadirTanding,
         ];
-
+        
         return view('dashboardUser',[
             'title'=> 'Dashboard',
             'user'=>$user,
-            'totalHadir'=> $totalhadir
+            'totalHadir'=> $totalhadir,
+            'jadwal'=>$statistik->take(3)
         ]);
     }
 }

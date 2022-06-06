@@ -53,6 +53,7 @@ class DashboardJadwalController extends Controller
         $pesertas = Peserta::where('levelpemain',$request->levelJadwal)->get();
 
         Jadwal::create($validatedData);
+        
         foreach ($pesertas as $peserta) {
             
             $stat=[
@@ -109,8 +110,23 @@ class DashboardJadwalController extends Controller
             'levelJadwal'=>'required',
             'typeJadwal'=>'required'
         ]);
+
+        $pesertas = Peserta::where('levelpemain',$request->levelJadwal)->get();
+
+        foreach ($pesertas as $peserta) {
+            if ($peserta->levelPemain != $jadwal->levelJadwal) {
+                $stat=[
+                    'peserta_id'=>$peserta->id,
+                    'jadwal_id'=>$jadwal->id,
+                    'status'=>0
+                ];
+    
+                Statistik::create($stat);
+            }
+            
+        }
+
         Jadwal::where('id',$jadwal->id)->update($validatedData);
-        
         return redirect('/dashboard/jadwal')->with('success','Jadwal Baru Ditambahkan');
 
     }
@@ -123,6 +139,12 @@ class DashboardJadwalController extends Controller
      */
     public function destroy(Jadwal $jadwal)
     {
+        $stat = Statistik::where('jadwal_id',$jadwal->id)->get();
+
+        foreach ($stat as $item) {
+            Statistik::destroy($item->id);
+        }
+        
         Jadwal::destroy($jadwal->id);
         
         return redirect('/dashboard/jadwal')->with('success','Jadwal terhapus');

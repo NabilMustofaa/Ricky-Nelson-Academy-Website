@@ -22,22 +22,7 @@
 </head>
 <body>
     @yield('content')
-    <section class="footer">
-
-        <div class="box-container">
-
-            <div class="box">
-                <h3>OUR SOCIAL MEDIA</h3>
-                <div class="share">
-                    <a href="https://www.facebook.com/Ricky-Nelson-Academy-589447584854154/" target="_blank" class="fab fa-facebook-f"></a>
-                    <a href="https://www.youtube.com/channel/UCLE40J2I-TmcH4xCjT9hYUQ" target="_blank" class="fab fa-youtube"></a>
-                    <a href="https://www.instagram.com/rickynelsonacademy/?hl=en" target="_blank" class="fab fa-instagram"></a>
-                </div>
-            </div>
-
-        </div>
-
-        <h1 class="credit"> Created by <a href="https://www.linkedin.com/in/rakyankrisna/" target="_blank"> 100temankalian </a> all rights reserved! </h1>
+    
 
     </section>
     <script src="{{ asset('assets/js/jquery-1.11.0.min.js') }}"></script>

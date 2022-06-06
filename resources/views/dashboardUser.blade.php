@@ -134,8 +134,11 @@
                 <div class="card text-white bg-dark mb-3" style="width: 25vw;">
                     <div class="card-header">Jadwal Mendatang</div>
                     <div class="card-body">
-                      <h5 class="card-title">Dark card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      @foreach ($jadwal as $item )
+                      <p class="card-title">{{ $item->jadwal->namaJadwal }} / {{ $item->jadwal->tanggalJadwal }} - {{ $item->jadwal->waktuJadwal }}</p>
+                      @endforeach
+                      
+                      
                     </div>
                   </div>
                   <div class="card text-white bg-secondary mb-3" style="width: 25vw;">

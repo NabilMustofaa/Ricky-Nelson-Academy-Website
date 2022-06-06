@@ -4,7 +4,7 @@
     
     <form action="/login" method="post">
     @csrf
-    <div class="container d-flex shadow-lg w-50 h-75 align-items-center p-0 mt-5">
+    <div class="container d-flex shadow-lg w-50 h-75 align-items-center p-0" style="margin: 8vh auto">
         <div class="d-flex w-50 h-100 m-0 p-5 align-items-center" style="background-color: #04AA6D;">
             <H1 style="color: white">Ricky Nelson Academy login</H1>
         </div>

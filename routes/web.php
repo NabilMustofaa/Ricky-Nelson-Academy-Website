@@ -28,6 +28,7 @@ use App\Models\statistik;
 Route::get('/', [BasicController::class,'home']);
 Route::get('/about',[BasicController::class,'about']);
 Route::get('/artikel',[BasicController::class,'artikel'] );
+Route::get('/artikel/{id}',[BasicController::class, 'viewArtikel']);
 Route::get('/jadwal',[BasicController::class, 'jadwal']);
 Route::get('/jadwal/{typeJadwal}',[BasicController::class, 'selectJadwal']);
 

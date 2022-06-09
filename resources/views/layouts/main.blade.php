@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-<body>
+<body style="max-width: 100vw">
     @yield('content')
     
 

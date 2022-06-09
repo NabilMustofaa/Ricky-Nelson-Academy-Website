@@ -22,6 +22,9 @@ nav{
 .nav-text:hover{
     border-bottom: 2px solid white;
 }
+.nav-link:hover{
+    color:#08ac6c;
+}
 body{
     margin: 0;
 }

@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class isAdmin
+class isPeserta
 {
     /**
      * Handle an incoming request.
@@ -14,12 +14,12 @@ class isAdmin
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next, ...$isAdmin)
+    public function handle(Request $request, Closure $next, ...$status)
     {
-        if (in_array($request->user()->isAdmin,$isAdmin)){
+        if (in_array($request->user()->pendaftaran->statusPembayaran,$status)){
             return $next($request);
         }
         
-        return redirect('/beranda');
+        return redirect('/bayar');
     }
 }

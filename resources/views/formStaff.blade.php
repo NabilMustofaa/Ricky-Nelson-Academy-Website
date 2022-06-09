@@ -12,7 +12,7 @@
         @csrf
         <div class="row justify-content-between">
             <div class="input-group mb-3 mx-3">
-                <div class="input-group-text col-2 py-2">
+                <div class="input-group-text col-3 py-2">
                     Nama Lengkap
                 </div>
                 <input type="text" class="form-control m-0 py-2 @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">

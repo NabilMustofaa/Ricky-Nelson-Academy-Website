@@ -35,7 +35,11 @@ class BasicController extends Controller
         ]);
     }
 
-   
+    public function bayar() {
+        return view('bayar',[
+            'title'=> 'Pembayaran',
+        ]);
+    }
 
     public function jadwal() {
         return view('jadwal',[

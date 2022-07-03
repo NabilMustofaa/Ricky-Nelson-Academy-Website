@@ -73,7 +73,7 @@
             <input type="hidden" name="oldImage" value="{{ $artikel->image }}">
 
             @if ($artikel->image)
-            <img class="img-fluid img-preview col-sm-4 my-2 d-flex" src="{{ asset('storage/' . $artikel->image) }}">
+            <img class="img-fluid img-preview col-sm-4 my-2 d-flex" src="{{ asset('uploads/' . $artikel->image) }}">
             @else
             <img class="img-fluid img-preview col-sm-4 my-2">
             @endif

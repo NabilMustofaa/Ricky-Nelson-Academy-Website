@@ -8,7 +8,7 @@
         
         <div class="d-flex flex-column m-0 ">
             <div class="d-flex flex-row m-0">
-                <img class="img-fluid img-preview col-sm-4 my-2 d-flex" src="{{ asset('storage/' . $artikel->image) }}">
+                <img class="img-fluid img-preview col-sm-4 my-2 d-flex" src="{{ asset('uploads/' . $artikel->image) }}">
                 <h1>{{ $artikel->judul_artikel }}</h1>
                 <p>{{ $artikel->isi_artikel }}</p>
             </div>

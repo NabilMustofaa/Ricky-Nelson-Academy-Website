@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="row p-5">
                     <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                        <img class="img-fluid" src="./assets/img/logo-ricky-nelson-ori.png" alt="">
+                        <img class="img-fluid" src="./assets/img/cover-web-rna-nobg.png" alt="" style="height: 500px">
                     </div>
                     <div class="col-lg-6 mb-0 d-flex align-items-center">
                         <div class="text-align-left align-self-center">
@@ -229,7 +229,7 @@
         <a href="/register" class="btn btn-success px-3" style="width: fit-content">Join With Us</a>
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-end">
-        <img src="{{ asset('assets/img/rakyan.png') }}" alt="" class="img-fluid">
+        <img src="{{ asset('assets/img/cover-web-rna.png') }}" alt="" class="img-fluid" style="min-height: 500px">
       </div>
     </div>
   </section>

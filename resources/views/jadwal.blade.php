@@ -4,14 +4,16 @@
 <section class="container py-5">
 
     <h1 class="text-center"> Jadwal Academy</h1>
-    <h2 class="text-center mt-5">Select By</h2>
+    <div class="d-flex flex-row align-items-center mt-5">
+        <h2 class="text-center me-4">Filter :</h2>
+        <a href ="/jadwal" class="btn {{ Request::path() ==  'jadwal' ? 'btn-success' : 'btn-secondary' }} me-2">Semua</a>
+        <a href ="/jadwal/Latihan" class="btn {{ Request::path() ==  'jadwal/Latihan' ? 'btn-success' : 'btn-secondary' }} me-2">Latihan</a>
+        <a href ="/jadwal/Tanding" class="btn {{ Request::path() ==  'jadwal/Tanding' ? 'btn-success' : 'btn-secondary' }} me-2">Tanding</a>
+    </div>
     <div class="select-container mt-0 mb-2">
-        <a href ="/jadwal" class="btn btn-success me-2">Semua</a>
-        <a href ="/jadwal/Latihan" class="btn btn-success me-2">Latihan</a>
-        <a href ="/jadwal/Tanding" class="btn btn-success me-2">Tanding</a>
     </div>
 
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Nama Jadwal</th>

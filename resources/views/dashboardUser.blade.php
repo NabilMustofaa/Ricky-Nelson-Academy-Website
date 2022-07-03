@@ -26,7 +26,7 @@
                     {{$message}}
                   </div>
                   @enderror
-                  <button type="button" class="btn btn-success mt-4" id="change" onclick="input()">Edit Profile</button>
+                  <button type="button" class="btn btn-danger mt-4" id="change" onclick="input()">Edit Profile</button>
 
                   <button type="submit" class="btn btn-primary mt-4 d-none" id="submit"> Update Profile </button>
                   

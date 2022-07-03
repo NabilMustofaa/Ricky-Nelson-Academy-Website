@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="row p-5">
                     <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                        <img class="img-fluid" src="./assets/img/banner_img_01.jpg" alt="">
+                        <img class="img-fluid" src="./assets/img/logo-ricky-nelson-ori.png" alt="">
                     </div>
                     <div class="col-lg-6 mb-0 d-flex align-items-center">
                         <div class="text-align-left align-self-center">
@@ -219,6 +219,19 @@
         </div>
     </section>
     <!-- Section: Images -->
+  </section>
+
+  <section class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 d-flex justify-content-center flex-column px-4">
+        <h2>BERGABUNG BERSAMA KAMI</h2>
+        <p>Daftar di sini untuk mendapatkan berita terbaru, pembaruan, dan penawaran khusus yang dikirim langsung ke kotak masuk Anda</p>
+        <a href="/register" class="btn btn-success px-3" style="width: fit-content">Join With Us</a>
+      </div>
+      <div class="col-12 col-md-6 d-flex justify-content-end">
+        <img src="{{ asset('assets/img/rakyan.png') }}" alt="" class="img-fluid">
+      </div>
+    </div>
   </section>
   <!-- Modal gallery -->
   @include('partials.footer')

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container h-100">
     <div>
-        <H1 class="mt-5">Registrasion</H1>
+        <H1 class="mt-5">Registration</H1>
         <H5 class="text-center">Please Complete Form Below</H5>
     </div>
     <div class="container-fluid d-flex flex-column mside">
@@ -104,7 +104,5 @@
         </form>
     </div>
 </div>
-
-@include('partials.footer')
 
 @endsection

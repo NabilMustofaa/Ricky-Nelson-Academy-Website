@@ -11,5 +11,4 @@
         <h1 class="my-4">{{ $artikel->judul_artikel }}</h1>
         <p >{!! $artikel->isi_artikel !!}</p>
     </div>
-    @include('partials.footer')
 @endsection

@@ -11,8 +11,8 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow">
     <div class="container d-flex justify-content-between align-items-center">
 
-        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-            RNA
+        <a class="navbar-brand text-success logo h1 align-self-center" href="/">
+            <img src="{{ asset('assets/img/logo-ricky-nelson-ori.png') }}" alt="" height="50">
         </a>
 
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -5,7 +5,7 @@
     <div class="container-fluid d-flex flex-column mside ">
         <p class="h2 ms-4 mt-3">Staff</p>
         <div class="d-flex me-4 mt-3 justify-content-between">
-            <a href= "staff/create" class="btn btn-success d-flex">Tambah Staff</a>
+            <a href= "staff/create" class="btn btn-danger d-flex">Tambah Staff</a>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>

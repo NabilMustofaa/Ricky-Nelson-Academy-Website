@@ -14,5 +14,4 @@
     </div>
     @endforeach
 </section>
-@include('partials.footer')
 @endsection

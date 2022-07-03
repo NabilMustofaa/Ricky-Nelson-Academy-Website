@@ -20,8 +20,11 @@
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-<body style="max-width: 100vw">
-    @yield('content')
+<body style="max-width: 100vw;">
+    <div style="min-height: 100vh">
+        @yield('content')
+    </div>
+  @include('partials.footer')
     
 
     </section>

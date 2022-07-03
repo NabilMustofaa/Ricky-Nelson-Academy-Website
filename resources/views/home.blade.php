@@ -234,5 +234,4 @@
     </div>
   </section>
   <!-- Modal gallery -->
-  @include('partials.footer')
 @endsection

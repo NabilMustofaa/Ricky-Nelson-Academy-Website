@@ -35,5 +35,4 @@
         </tbody>
     </table>
 </section>
-@include('partials.footer')
 @endsection

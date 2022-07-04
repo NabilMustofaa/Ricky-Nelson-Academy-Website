@@ -13,6 +13,7 @@ class LoginController extends Controller
         ]);
     }
     public function authenticate(Request $request){
+        
         $credentials= $request->validate([
             'email'=>'required|email:dns',
             'password'=>'required'
@@ -24,6 +25,7 @@ class LoginController extends Controller
        }
        return back()->with('loginError','Login failed');
     }
+    
     public function logout(Request $request){
         Auth::logout();
  

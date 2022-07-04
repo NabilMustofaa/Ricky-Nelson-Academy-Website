@@ -14,7 +14,7 @@
                 <div class="card text-center m-2 p-5 d-flex flex-col align-items-center bg-white bg-opacity-50" style="width: 25%;">
                   <input type="hidden" name="oldImage" value="{{ $staff->User->image }}">
                   @if ($staff->User->image)
-                  <img class="img-fluid img-preview rounded float-start mx-auto d-block d-flex" width="250px" src="{{ asset('storage/' . $staff->User->image) }}">
+                  <img class="img-fluid img-preview rounded float-start mx-auto d-block d-flex" width="250px" src="{{ asset('uploads/' . $staff->User->image) }}">
                   @else
                   <img class="img-fluid img-preview rounded float-start mx-auto d-block" width="250px">
                   @endif

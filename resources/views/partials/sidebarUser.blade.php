@@ -23,8 +23,8 @@
     <hr>
     <div class="d-flex justify-content-between">
         <div href="#" class="d-flex align-items-center text-white text-decoration-none" >
-            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-            <p class="my-auto">Nabil</p>
+          <img src="{{ asset('uploads/' . auth()->user()->image) }}" alt="" width="32" height="32" class="rounded-circle me-2">
+          <p class="my-auto">{{ auth()->user()->name }}</p>
         </div>
         <form action="/logout" method="POST">
           @csrf

@@ -44,7 +44,6 @@ class staffController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
         $validatedUser=$request->validate([
             'name'=>'required',
             'email'=>'required|unique:users',
